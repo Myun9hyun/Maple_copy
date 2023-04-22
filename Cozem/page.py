@@ -181,7 +181,7 @@ elif choice == "길드페이지":
         st.header("메이플지지 검색")
 
         # 검색할 캐릭터 이름
-        character_name = st.text_input("닉네임을 입력해주세요 : ")
+        character_name = st.text_input("닉네임을 입력해주세요")
 
         # 검색 결과 페이지의 URL
         url = f'https://maple.gg/u/{character_name}'
