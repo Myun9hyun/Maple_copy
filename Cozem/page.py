@@ -786,7 +786,7 @@ elif choice == "직위관리":
                 else:
                     st.success(f"경고자 {name}이(가) 추가되었습니다.")
 
-                data1 = data1.add({
+                data1 = data1.append({
                     'Name': name, 
                     'Warning' : warning_count,
                     'Reason' : reason
