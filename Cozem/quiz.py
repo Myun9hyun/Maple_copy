@@ -369,7 +369,7 @@ elif choice == "퀴즈풀기":
     # 5번
     quiz5_password = st.text_input("5번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz5_password")
     if quiz5_password == password5:
-        quiz5 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!")
+        quiz5 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!", key="quiz5")
         st.write("나는 공지방에서 썬데이 메이플 공지를 하고 있습니다!")
         st.write("나의 직업은 '영웅' 직업군입니다")
         st.write("나는 누구 일까요?")
@@ -399,7 +399,7 @@ elif choice == "퀴즈풀기":
     # 6번
     quiz6_password = st.text_input("6번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz6_password")
     if quiz6_password == password6:
-        quiz6 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!")
+        quiz6 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!", key = "quiz6")
         st.write("나는 이름에 동물이 들어가있어")
         st.write("나의 직업은 '모험가 도적군'이야")
         st.write("나는 레벨이 280을 넘었어!")
