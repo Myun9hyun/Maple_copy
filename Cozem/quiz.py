@@ -133,7 +133,7 @@ if choice == "메인페이지":
     st.write()
     '''
     ##### 우리 아기자기는요~
-    * 201X년 X월 창설
+    * 2019년 6월 창설
     * 2022년 5월 14일 30레벨 달성
     * 47포 길드
     * Lv220 이상 가입 가능
@@ -274,7 +274,7 @@ elif choice == "퀴즈풀기":
     password5 = "둥둥"
     answer5 = "1"
     password6 = "커피"
-    answer6 = ""
+    answer6 = "4"
 
     st.write("1번 문제의 비밀번호는 공지방에서 알려주는 비밀번호를 확인해줘")
 
@@ -399,8 +399,28 @@ elif choice == "퀴즈풀기":
     # 6번
     quiz6_password = st.text_input("6번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz6_password")
     if quiz6_password == password6:
-        quiz6 = st.text_input("")
-
+        quiz6 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!")
+        st.write("나는 이름에 동물이 들어가있어")
+        st.write("나의 직업은 모험가 도적군이야")
+        st.write("나는 레벨이 280을 넘었어!")
+        st.write("나는 누구일까요?")
+        st.write("1. 영래닭")
+        st.write("2. 영래소")
+        st.write("3. 영래모기")
+        st.write("4. 영래곰")
+        if st.button("정답 확인", key = "check_answer_button6"):
+            if quiz6 == answer6:
+                st.balloons()
+                st.success("정답입니다!")
+                st.write("[영래곰]은 길드에서 길드원 명단을 엑셀로 관리를 하고 있어.")
+                st.write("[영래곰]은 간부진들 중에서 레벨이 제일 높아")
+                st.write("[영래곰]은 플래그 모든맵에서 1000점을 획득할 수 있는 플래그 고수야")
+            else : 
+                st.warning("다시 한 번 생각해봐!")
+        if st.button("힌트 보기", key = "check_hint_button6"):
+            st.write("문을 거꾸로 뒤집으면 뭘까요?")
+    elif quiz6_password != "" and quiz6_password != password6:
+        st.error("비밀번호가 틀렸어!")
 
 
 
