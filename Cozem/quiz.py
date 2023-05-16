@@ -22,7 +22,7 @@ from bs4 import BeautifulSoup
 
 
 st.set_page_config(page_title="BanShamDoongDolYoung", page_icon=":rabbit:", layout="wide")
-password = 1234
+password = 970808
 password_test = "1234"
 
 image = Image.open("Cozem/image/cover_guild.jpg")
