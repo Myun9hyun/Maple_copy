@@ -103,6 +103,7 @@ with st.sidebar:
         "nav-link-selected": {"background-color": "#02ab21"},
     }
     )
+    df = pd.DataFrame(data)
 
     # st.sidebar.dataframe(df)
     st.write(df.to_markdown(index=False))
