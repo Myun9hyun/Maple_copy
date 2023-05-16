@@ -361,7 +361,7 @@ elif choice == "퀴즈풀기":
         if st.button("힌트 보기", key = "check_hint_button4"):
             st.write("이 사람의 직업은 캐논마스터야!")
             st.write("이 사람은 공지방에서 이벤트 알림이 역할을 하고 있어!")
-            st.write("상단에 우측 하단을 보면 만든 사람이 적혀있어!")
+            st.write("상단에 배너 우측 하단을 보면 만든 사람이 적혀있어!")
     elif quiz4_password != "" and quiz4_password != password4:
         st.error("비밀번호가 틀렸어!")
 
