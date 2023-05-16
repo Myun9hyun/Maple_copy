@@ -452,8 +452,10 @@ elif choice == "아카이브":
         with col4:
             st.write("**엘리넬**")
             st.image("Cozem/image/elinel.jpg", use_column_width=True)
+
 elif choice == "의견남기기":
     st.write("간부진들에게 하고싶은 말을 남겨주세요")
+    st.write("남겨주신 의견은 간부진들만 확인하며, 남겨주신 내용을 바탕으로 더 나은 길드 만들겠습니다!")
     FILE_PATH10 = 'data10.csv'
     options = ["의견 남기기➕", "내용 조회🔎", "내용 삭제✂", "초기화💣" ]
     option = st.selectbox("기능 선택", options, key='select3')
