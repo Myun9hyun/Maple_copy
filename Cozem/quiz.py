@@ -401,7 +401,7 @@ elif choice == "퀴즈풀기":
     if quiz6_password == password6:
         quiz6 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!")
         st.write("나는 이름에 동물이 들어가있어")
-        st.write("나의 직업은 모험가 도적군이야")
+        st.write("나의 직업은 '모험가 도적군'이야")
         st.write("나는 레벨이 280을 넘었어!")
         st.write("나는 누구일까요?")
         st.write("1. 영래닭")
