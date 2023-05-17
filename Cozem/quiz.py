@@ -516,7 +516,7 @@ elif choice == "퀴즈풀기":
             st.write("4. Ch.18 세르니움 광장")       
             st.write("5. Ch.18 이름없는 마을")       
             if st.button("정답 확인", key = "check_answer_button9"):
-                if quiz9 == password9:
+                if quiz9 == answer9:
                     st.balloons()
                     st.success("정답입니다!")
                     st.write("아기자기의 길드집은 18채널 리나의 집이야!")
@@ -537,7 +537,7 @@ elif choice == "퀴즈풀기":
         if quiz10_password == password10:
             quiz10 = st.text_input("우리 아기자기에서 길드원들 중 기여도가 제일 높은 사람의 닉네임을 적어줘!")
             if st.button("정답 확인", key = "check_answer_button10"):
-                if quiz10 == password10:
+                if quiz10 == answer10:
                     st.balloons()
                     st.success("정답입니다!")
                     st.write("[뱐뎅]님은 우리 아기자기에서 길드원들 중에서 기여도가 제일 높아!")
