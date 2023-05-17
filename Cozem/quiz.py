@@ -299,7 +299,7 @@ elif choice == "퀴즈풀기":
         answer9 = "2"
         password10 = ""
         answer10 = "뱐뎅"
-        password11 ="아깅이들고마워"
+
 
         st.write("1번 문제의 비밀번호는 공지방에서 알려주는 비밀번호를 확인해줘")
 
@@ -550,7 +550,9 @@ elif choice == "퀴즈풀기":
         
     # ----------------------------------------------------------------------------------------------------------
     # 11번    
+    
     with tab3:
+        password11 ="아깅이들고마워"
         quiz11_password = st.text_input("11번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz11_password")
         if quiz11_password == password11:
             st.write("와~! 여기까지 문제 푸느라 정말 고생 많았어!")
