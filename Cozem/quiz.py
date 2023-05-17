@@ -664,8 +664,9 @@ elif choice == "퀴즈풀기":
                         st.write("참여하신 분들 중 3명만 뽑겠습니다!")
                         present = data[data['Vote'] == '동의']
                         present_list = present['Name'].tolist()
-                        random_names = random.sample(present_list, 3)
+                        
                         if st.button("당첨자 뽑기!!"):
+                            random_names = random.sample(present_list, 3)
                             st.write("당첨자 3분은 다음과 같습니다!!")
                             st.write(random_names)
                     elif password_input != "" and password_input != password:
