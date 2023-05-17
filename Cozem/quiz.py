@@ -325,12 +325,8 @@ elif choice == "퀴즈풀기":
 
         # ----------------------------------------------------------------------------------------------------------
         # 2번
-        character_name = "뱌닢"
-
-        # 검색 결과 페이지의 URL
-        url = f'https://maple.gg/u/{character_name}'
-        
-        
+        character_name1 = "뱌닢"
+        url = f'https://maple.gg/u/{character_name1}'
         
         quiz2_password = st.text_input("2번 문제 오픈을 위한 비밀번호를 입력해주세요!")
         if quiz2_password == password2:
@@ -341,19 +337,16 @@ elif choice == "퀴즈풀기":
                     st.success("정답입니다!")
                     
                     # st.image("메지지 이미지 넣기")
-                    def get_maple_info(character_name):
-                        url = f"https://maple.gg/u/{character_name}"
+                    def get_maple_info(character_name1):
+                        url = f"https://maple.gg/u/{character_name1}"
                         response = requests.get(url)
                         soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image")["src"]
+                        img_url = soup.select_one(".character-image1")["src"]
                         response = requests.get(img_url)
                         img = Image.open(BytesIO(response.content))
-
                         return  img
 
-                  
-                    img = get_maple_info(character_name)
-                    
+                    img = get_maple_info(character_name1)
                     st.image(img, width=200)
                   
                     st.write("[뱌닢]은 우리 길드의 길드마스터야!")
@@ -371,6 +364,9 @@ elif choice == "퀴즈풀기":
 
         # ----------------------------------------------------------------------------------------------------------
         # 3번
+        character_name2 = "릎샴"
+        url = f'https://maple.gg/u/{character_name2}'
+
         quiz3_password = st.text_input("3번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz3_password3")
         if quiz3_password == password3:
             quiz3 = st.text_input("이번 메이플 팬페스트 금손 부스에 참석한 간부는 누구일까?")
@@ -379,6 +375,17 @@ elif choice == "퀴즈풀기":
                     st.balloons()
                     st.success("정답입니다!")
                     # st.image("메지지 이미지 넣기")
+                    def get_maple_info(character_name2):
+                        url = f"https://maple.gg/u/{character_name2}"
+                        response = requests.get(url)
+                        soup = BeautifulSoup(response.content, "html.parser")
+                        img_url = soup.select_one(".character-image2")["src"]
+                        response = requests.get(img_url)
+                        img = Image.open(BytesIO(response.content))
+                        return  img
+
+                    img = get_maple_info(character_name2)
+                    st.image(img, width=200)
                     st.write("[릎샴]은 이번 팬페스트에 '볼빵빵하우스'라는 부스 담당자로 참석했어!")
                     st.write("[릎샴]은 길드에서 포스터, 각종 양식틀, 길드규정문 등을 만드는 디자이너 역할을 하고 있어!")
                     st.write("[릎샴]은 이번 창설이벤트 경품으로 제공되는 물품도 만들었어!")
@@ -394,6 +401,8 @@ elif choice == "퀴즈풀기":
 
         # ----------------------------------------------------------------------------------------------------------
         # 4번
+        character_name3 = "둥둥향"
+        url = f'https://maple.gg/u/{character_name3}'
         quiz4_password = st.text_input("4번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz4_password")
         if quiz4_password == password4:
             quiz4 = st.text_input("이 페이지 누가 만들었을까?")
@@ -402,6 +411,17 @@ elif choice == "퀴즈풀기":
                     st.balloons()
                     st.success("정답입니다!")
                     # st.image("메지지 프로필 넣기")
+                    def get_maple_info(character_name3):
+                        url = f"https://maple.gg/u/{character_name3}"
+                        response = requests.get(url)
+                        soup = BeautifulSoup(response.content, "html.parser")
+                        img_url = soup.select_one(".character-image3")["src"]
+                        response = requests.get(img_url)
+                        img = Image.open(BytesIO(response.content))
+                        return  img
+
+                    img = get_maple_info(character_name)
+                    st.image(img, width=200)
                     st.write("[둥둥향]은 하찮은 컴퓨터 실력으로 페이지와 코젬계산기 만드는 역할을 맡고 있어!")
                     st.write("[둥둥향]은 공지방에서 이벤트 정리글을 공유하는 역할을 하고 있어!")
                     st.write("[둥둥향]은 공지글의 멘트를 작성하는 역할을 하고 있어!")
@@ -434,6 +454,17 @@ elif choice == "퀴즈풀기":
                 if quiz5 == answer5:
                     st.balloons()
                     st.success("정답입니다!")
+                    def get_maple_info(character_name):
+                        url = f"https://maple.gg/u/{character_name}"
+                        response = requests.get(url)
+                        soup = BeautifulSoup(response.content, "html.parser")
+                        img_url = soup.select_one(".character-image")["src"]
+                        response = requests.get(img_url)
+                        img = Image.open(BytesIO(response.content))
+                        return  img
+
+                    img = get_maple_info(character_name)
+                    st.image(img, width=200)
                     st.write("[돌체라페]는 간부진 막내로서 다른 간부들을 위해 열심히 도와주고 있어!")
                     st.write("[돌체라페]는 매주 금요일 10시 썬데이메이플 내용을 공지방에 공유해주고 있어")
                     st.write("[돌체라페]는 매주 일요일 길드 컨텐츠 이행여부를 확인하고, 직위 상승/하락을 확인하고 있어")
@@ -463,6 +494,17 @@ elif choice == "퀴즈풀기":
                 if quiz6 == answer6:
                     st.balloons()
                     st.success("정답입니다!")
+                    def get_maple_info(character_name):
+                        url = f"https://maple.gg/u/{character_name}"
+                        response = requests.get(url)
+                        soup = BeautifulSoup(response.content, "html.parser")
+                        img_url = soup.select_one(".character-image")["src"]
+                        response = requests.get(img_url)
+                        img = Image.open(BytesIO(response.content))
+                        return  img
+
+                    img = get_maple_info(character_name)
+                    st.image(img, width=200)
                     st.write("[영래곰]은 길드에서 길드원 명단을 엑셀로 관리를 하고 있어.")
                     st.write("[영래곰]은 간부진들 중에서 레벨이 제일 높아")
                     st.write("[영래곰]은 플래그 모든맵에서 1000점을 획득할 수 있는 플래그 고수야")
