@@ -728,10 +728,11 @@ elif choice == "퀴즈풀기":
                     if password_input == password:
                         st.success('접근을 허용합니다')
                         st.write("참여하신 분들 중 5명만 뽑겠습니다!")
-                        st.write("추첨 대상자는 다음과 같아!")
-                        st.write(present_list)
+                        
                         present = data[data['Vote'] == '동의']
                         present_list = present['Name'].tolist()
+                        st.write("추첨 대상자는 다음과 같아!")
+                        st.write(present_list)
 
                         if st.button("당첨자 뽑기!!"):
                             if len(present_list) < 5 and len(present_list) > 0:
