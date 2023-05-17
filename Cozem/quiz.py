@@ -141,7 +141,7 @@ if choice == "메인페이지":
     '''
 
 elif choice == "길드페이지":
-    tab1, tab2, tab3= st.tabs(["😎Manager", "📋Rules", "Character Data"])
+    tab1, tab2, tab3= st.tabs(["😎Manager", "📋Rules", "Character Data"],key="tab1")
     with tab1:
         st.header("😎Manager")
         st.write()
@@ -261,7 +261,7 @@ elif choice == "길드페이지":
             st.write(f'경험치: {exp_percentage}')
             
 elif choice == "퀴즈풀기":
-    tab1, tab2, tab3= st.tabs(["Readme", "Quiz", "Special_Quiz"])
+    tab1, tab2, tab3= st.tabs(["Readme", "Quiz", "Special_Quiz"],key="tab2")
     with tab1:
         st.header("길드 창설이벤트 퀴즈 풀기!")
         st.write()
