@@ -572,7 +572,7 @@ elif choice == "퀴즈풀기":
             참여해줘서 정말 고마워!
             '''
             FILE_PATH = 'data.csv'
-            options = ["닉네임 남기기➕", "닉네임 조회🔎", "닉네임 삭제✂", "초기화💣" ]
+            options = ["닉네임 남기기➕", "닉네임 조회🔎", "닉네임 삭제✂", "초기화💣","추첨하기🎊" ]
             option = st.selectbox("기능 선택", options, key='select3')
             # 파일에서 데이터 불러오기
             def load_data():
@@ -656,7 +656,7 @@ elif choice == "퀴즈풀기":
                             st.warning('초기화 되었습니다')
                     elif password_input != "" and password_input != password:
                         st.warning('비밀번호가 틀렸습니다.')
-                elif option == "추첨하기":
+                elif option == "추첨하기🎊":
                     st.error("⚠️길드 간부진만 접근할 수 있는 메뉴입니다!⚠️")
                     password_input = st.text_input('비밀번호를 입력해주세요 : ',key='pass41')
                     if password_input == password:
