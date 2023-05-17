@@ -605,7 +605,7 @@ elif choice == "퀴즈풀기":
                 new_data = pd.DataFrame({'Name': [name], 'Vote': [vote], 'Day': [day]})
                 data = pd.concat([data, new_data], ignore_index=True)
             def main():
-                if option == "내용 삭제✂":
+                if option == "닉네임 삭제✂":
                     st.error('⚠️길드 간부진만 접근할 수 있는 메뉴입니다!⚠️')
                     password_input = st.text_input('비밀번호를 입력해주세요 : ', key='pass11')
                     if password_input == password:
@@ -632,7 +632,7 @@ elif choice == "퀴즈풀기":
                         save_data(data)
                         st.success("감사합니다!!ヾ(•ω•`)o")
 
-                elif option == "내용 조회🔎":
+                elif option == "닉네임 조회🔎":
                     st.error('⚠️길드 간부진만 접근할 수 있는 메뉴입니다!⚠️')
                     password_input = st.text_input('비밀번호를 입력해주세요 : ',key='pass21')
                     if password_input == password:
