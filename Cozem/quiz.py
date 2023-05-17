@@ -572,92 +572,92 @@ elif choice == "퀴즈풀기":
             참여해줘서 정말 고마워!
             '''
             FILE_PATH = 'data.csv'
-    options = ["닉네임 남기기➕", "닉네임 조회🔎", "닉네임 삭제✂", "초기화💣" ]
-    option = st.selectbox("기능 선택", options, key='select3')
-    # 파일에서 데이터 불러오기
-    def load_data():
-        try: 
-            data = pd.read_csv(FILE_PATH)
-        except FileNotFoundError:
-            data = pd.DataFrame(columns=['Name', 'Vote', 'Day'])
-        return data
+            options = ["닉네임 남기기➕", "닉네임 조회🔎", "닉네임 삭제✂", "초기화💣" ]
+            option = st.selectbox("기능 선택", options, key='select3')
+            # 파일에서 데이터 불러오기
+            def load_data():
+                try: 
+                    data = pd.read_csv(FILE_PATH)
+                except FileNotFoundError:
+                    data = pd.DataFrame(columns=['Name', 'Vote', 'Day'])
+                return data
 
-    # 데이터를 파일에 저장하기
-    def save_data(data):
-        data.to_csv(FILE_PATH, index=False)
+            # 데이터를 파일에 저장하기
+            def save_data(data):
+                data.to_csv(FILE_PATH, index=False)
 
-    # 데이터 초기화 함수
-    def clear_data():
-        global data
-        data = pd.DataFrame(columns=['Name', 'Vote', 'Day'])
-        # 파일 삭제
-        os.remove(FILE_PATH)
+            # 데이터 초기화 함수
+            def clear_data():
+                global data
+                data = pd.DataFrame(columns=['Name', 'Vote', 'Day'])
+                # 파일 삭제
+                os.remove(FILE_PATH)
 
-    # 데이터 삭제 함수
-    def delete_data(row_index):
-        global data
-        data = data.drop(index=row_index).reset_index(drop=True)
+            # 데이터 삭제 함수
+            def delete_data(row_index):
+                global data
+                data = data.drop(index=row_index).reset_index(drop=True)
 
-    # 불러온 데이터를 전역 변수로 저장
-    data = load_data()
-    def add_data(name, vote, day):
-        global data
-        new_data = pd.DataFrame({'Name': [name], 'Vote': [vote], 'Day': [day]})
-        data = pd.concat([data, new_data], ignore_index=True)
-    def main():
-        if option == "내용 삭제✂":
-            st.error('⚠️길드 간부진만 접근할 수 있는 메뉴입니다!⚠️')
-            password_input = st.text_input('비밀번호를 입력해주세요 : ', key='pass11')
-            if password_input == password:
-                st.success('접근을 허용합니다')
-                st.write(data[['Name','Comment', 'Day']])
-                row_index = st.number_input('삭제하고 싶은 데이터의 번호를 입력해주세요', min_value=0, max_value=data10.shape[0]-1)
-                st.write("Enter를 입력하면 삭제됩니다.")
-                if st.button('데이터 삭제'):
-                    # 해당 행이 존재할 경우, 행을 삭제
-                    if row_index >= 0 and row_index < data.shape[0]:
-                        delete_data(row_index)
-                        save_data(data)  # 데이터를 파일에 저장
-                        st.success('입력하신 행이 삭제되었습니다.')
-            elif password_input != "" and password_input != password:
-                st.warning('비밀번호가 틀렸습니다.')
-        elif option == "닉네임 남기기➕":
-            name = st.text_input("닉네임을 남겨주세요")
-            vote = st.radio("주소 제공에 동의하시나요?",('동의', '비동의'))
-            day = st.date_input(
-                "의견 남기는 날짜를 설정해주세요",
-                datetime.date.today())
-            if st.button('닉네임 남기기'):
-                add_data(name, vote, day)
-                save_data(data)
-                st.success("감사합니다!!ヾ(•ω•`)o")
+            # 불러온 데이터를 전역 변수로 저장
+            data = load_data()
+            def add_data(name, vote, day):
+                global data
+                new_data = pd.DataFrame({'Name': [name], 'Vote': [vote], 'Day': [day]})
+                data = pd.concat([data, new_data], ignore_index=True)
+            def main():
+                if option == "내용 삭제✂":
+                    st.error('⚠️길드 간부진만 접근할 수 있는 메뉴입니다!⚠️')
+                    password_input = st.text_input('비밀번호를 입력해주세요 : ', key='pass11')
+                    if password_input == password:
+                        st.success('접근을 허용합니다')
+                        st.write(data[['Name','Comment', 'Day']])
+                        row_index = st.number_input('삭제하고 싶은 데이터의 번호를 입력해주세요', min_value=0, max_value=data10.shape[0]-1)
+                        st.write("Enter를 입력하면 삭제됩니다.")
+                        if st.button('데이터 삭제'):
+                            # 해당 행이 존재할 경우, 행을 삭제
+                            if row_index >= 0 and row_index < data.shape[0]:
+                                delete_data(row_index)
+                                save_data(data)  # 데이터를 파일에 저장
+                                st.success('입력하신 행이 삭제되었습니다.')
+                    elif password_input != "" and password_input != password:
+                        st.warning('비밀번호가 틀렸습니다.')
+                elif option == "닉네임 남기기➕":
+                    name = st.text_input("닉네임을 남겨주세요")
+                    vote = st.radio("주소 제공에 동의하시나요?",('동의', '비동의'))
+                    day = st.date_input(
+                        "의견 남기는 날짜를 설정해주세요",
+                        datetime.date.today())
+                    if st.button('닉네임 남기기'):
+                        add_data(name, vote, day)
+                        save_data(data)
+                        st.success("감사합니다!!ヾ(•ω•`)o")
 
-        elif option == "내용 조회🔎":
-            st.error('⚠️길드 간부진만 접근할 수 있는 메뉴입니다!⚠️')
-            password_input = st.text_input('비밀번호를 입력해주세요 : ',key='pass21')
-            if password_input == password:
-                st.success('접근을 허용합니다')
-                if st.button('내용 확인'):
-                    st.write("내용입니다.")
-                    st.write(data)
-            elif password_input != "" and password_input != password:
-                st.warning('비밀번호가 틀렸습니다.')
+                elif option == "내용 조회🔎":
+                    st.error('⚠️길드 간부진만 접근할 수 있는 메뉴입니다!⚠️')
+                    password_input = st.text_input('비밀번호를 입력해주세요 : ',key='pass21')
+                    if password_input == password:
+                        st.success('접근을 허용합니다')
+                        if st.button('내용 확인'):
+                            st.write("내용입니다.")
+                            st.write(data)
+                    elif password_input != "" and password_input != password:
+                        st.warning('비밀번호가 틀렸습니다.')
 
-        elif option == "초기화💣":
-            st.error('⚠️길드 간부진만 접근할 수 있는 메뉴입니다!⚠️')
-            password_input = st.text_input('비밀번호를 입력해주세요 : ',key='pass31')
-            if password_input == password:
-                st.success('접근을 허용합니다')
-                # 데이터 전부 삭제
-                st.write("⚠️버튼을 누르면 데이터가 다 날아갑니다!⚠️")
-                st.write("⚠️신중하게 누르세요!!⚠️")
-                if st.button('초기화'):
-                    clear_data()
-                    st.warning('초기화 되었습니다')
-            elif password_input != "" and password_input != password:
-                st.warning('비밀번호가 틀렸습니다.')
-    if __name__ == "__main__":
-        main()
+                elif option == "초기화💣":
+                    st.error('⚠️길드 간부진만 접근할 수 있는 메뉴입니다!⚠️')
+                    password_input = st.text_input('비밀번호를 입력해주세요 : ',key='pass31')
+                    if password_input == password:
+                        st.success('접근을 허용합니다')
+                        # 데이터 전부 삭제
+                        st.write("⚠️버튼을 누르면 데이터가 다 날아갑니다!⚠️")
+                        st.write("⚠️신중하게 누르세요!!⚠️")
+                        if st.button('초기화'):
+                            clear_data()
+                            st.warning('초기화 되었습니다')
+                    elif password_input != "" and password_input != password:
+                        st.warning('비밀번호가 틀렸습니다.')
+            if __name__ == "__main__":
+                main()
 
 elif choice == "아카이브":
     st.header("길드 아카이브")
