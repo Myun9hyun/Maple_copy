@@ -478,7 +478,7 @@ elif choice == "퀴즈풀기":
         # 8번
         quiz8_password = st.text_input("8번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz8_password")
         if quiz8_password == password8:
-            quiz8 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!")
+            quiz8 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!",key = "quiz8")
             st.write("길드 필참 컨텐츠 중 주간미션을 이 점수 만큼 필수로 채워야 하는데 몇점 일까?")
             st.write("보기")
             st.write("1. 5점")
@@ -504,7 +504,7 @@ elif choice == "퀴즈풀기":
         # 9번
         quiz9_password = st.text_input("9번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz9_password") 
         if quiz9_password == password9:
-            quiz9 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!")
+            quiz9 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!", key = "quiz9")
             st.write("아기자기 길드의 길드집은 어디일까?")
             st.write("보기")
             st.write("1. Ch.18 셀라스")       
