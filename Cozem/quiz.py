@@ -438,6 +438,8 @@ elif choice == "퀴즈풀기":
 
         # ----------------------------------------------------------------------------------------------------------
         # 5번
+        character_name4 = "돌체라페"
+        url = f'https://maple.gg/u/{character_name4}'
         quiz5_password = st.text_input("5번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz5_password")
         if quiz5_password == password5:
             quiz5 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!", key="quiz5")
@@ -454,8 +456,8 @@ elif choice == "퀴즈풀기":
                 if quiz5 == answer5:
                     st.balloons()
                     st.success("정답입니다!")
-                    def get_maple_info(character_name):
-                        url = f"https://maple.gg/u/{character_name}"
+                    def get_maple_info(character_name4):
+                        url = f"https://maple.gg/u/{character_name4}"
                         response = requests.get(url)
                         soup = BeautifulSoup(response.content, "html.parser")
                         img_url = soup.select_one(".character-image")["src"]
@@ -479,6 +481,8 @@ elif choice == "퀴즈풀기":
 
         # ----------------------------------------------------------------------------------------------------------
         # 6번
+        character_name5 = "영래곰"
+        url = f'https://maple.gg/u/{character_name5}'
         quiz6_password = st.text_input("6번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz6_password")
         if quiz6_password == password6:
             quiz6 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!", key = "quiz6")
@@ -494,8 +498,8 @@ elif choice == "퀴즈풀기":
                 if quiz6 == answer6:
                     st.balloons()
                     st.success("정답입니다!")
-                    def get_maple_info(character_name):
-                        url = f"https://maple.gg/u/{character_name}"
+                    def get_maple_info(character_name5):
+                        url = f"https://maple.gg/u/{character_name5}"
                         response = requests.get(url)
                         soup = BeautifulSoup(response.content, "html.parser")
                         img_url = soup.select_one(".character-image")["src"]
