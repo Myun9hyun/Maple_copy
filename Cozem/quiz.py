@@ -420,7 +420,7 @@ elif choice == "퀴즈풀기":
                         img = Image.open(BytesIO(response.content))
                         return  img
 
-                    img = get_maple_info(character_name)
+                    img = get_maple_info(character_name3)
                     st.image(img, width=200)
                     st.write("[둥둥향]은 하찮은 컴퓨터 실력으로 페이지와 코젬계산기 만드는 역할을 맡고 있어!")
                     st.write("[둥둥향]은 공지방에서 이벤트 정리글을 공유하는 역할을 하고 있어!")
@@ -465,7 +465,7 @@ elif choice == "퀴즈풀기":
                         img = Image.open(BytesIO(response.content))
                         return  img
 
-                    img = get_maple_info(character_name)
+                    img = get_maple_info(character_name4)
                     st.image(img, width=200)
                     st.write("[돌체라페]는 간부진 막내로서 다른 간부들을 위해 열심히 도와주고 있어!")
                     st.write("[돌체라페]는 매주 금요일 10시 썬데이메이플 내용을 공지방에 공유해주고 있어")
@@ -507,7 +507,7 @@ elif choice == "퀴즈풀기":
                         img = Image.open(BytesIO(response.content))
                         return  img
 
-                    img = get_maple_info(character_name)
+                    img = get_maple_info(character_name5)
                     st.image(img, width=200)
                     st.write("[영래곰]은 길드에서 길드원 명단을 엑셀로 관리를 하고 있어.")
                     st.write("[영래곰]은 간부진들 중에서 레벨이 제일 높아")
