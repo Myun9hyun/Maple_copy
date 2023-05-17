@@ -691,12 +691,12 @@ elif choice == "퀴즈풀기":
                     name = st.text_input("닉네임을 남겨주세요")
                     vote = st.radio("주소 제공에 동의하시나요? 비동의에 체크시, 추첨에서 제외됩니다!",('동의', '비동의'))
                     day = st.date_input(
-                        "의견 남기는 날짜를 설정해주세요",
+                        "남기시는 날짜를 설정해주세요",
                         datetime.date.today())
                     if st.button('닉네임 남기기'):
                         add_data(name, vote, day)
                         save_data(data)
-                        st.success("감사합니다!!ヾ(•ω•`)o")
+                        st.success("참여해주셔서 감사합니다!!ヾ(•ω•`)o")
 
                 elif option == "닉네임 조회🔎":
                     st.error('⚠️길드 간부진만 접근할 수 있는 메뉴입니다!⚠️')
