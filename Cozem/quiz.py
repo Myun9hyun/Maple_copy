@@ -677,7 +677,7 @@ elif choice == "퀴즈풀기":
                     if password_input == password:
                         st.success('접근을 허용합니다')
                         st.write(data[['Name','Comment', 'Day']])
-                        row_index = st.number_input('삭제하고 싶은 데이터의 번호를 입력해주세요', min_value=0, max_value=data10.shape[0]-1)
+                        row_index = st.number_input('삭제하고 싶은 데이터의 번호를 입력해주세요', min_value=0, max_value=data.shape[0]-1)
                         st.write("Enter를 입력하면 삭제됩니다.")
                         if st.button('데이터 삭제'):
                             # 해당 행이 존재할 경우, 행을 삭제
