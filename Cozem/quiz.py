@@ -672,7 +672,7 @@ elif choice == "퀴즈풀기":
                                 st.write(present_list)
                                 st.write("남겨준 사람이 3명보다도 적어..")
                             elif present_list >= 3:
-                            st.write(random_names)
+                                st.write(random_names)
                     elif password_input != "" and password_input != password:
                         st.warning('비밀번호가 틀렸습니다.') 
 
