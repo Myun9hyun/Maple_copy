@@ -732,9 +732,11 @@ elif choice == "퀴즈풀기":
                         present_list = present['Name'].tolist()
 
                         if st.button("당첨자 뽑기!!"):
-                            if len(present_list) < 3:
+                            if len(present_list) < 3 and len(present_list) >= 0:
                                 st.write(present_list)
                                 st.write("남겨준 사람이 3명보다도 적어..")
+                            elif len(present_list) == 0:
+                                st.write("아무도 남겨주지 않았어（；´д｀）ゞ")
                             else:
                                 random_names = random.sample(present_list, 3)
                                 st.write("당첨자 3분은 다음과 같습니다!!")
