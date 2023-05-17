@@ -296,11 +296,11 @@ elif choice == "퀴즈풀기":
         answer6 = "4"
         password7 = "듀블"
         answer7 = "아깅이"
-        password8 = ""
+        password8 = "1906"
         answer8 = "3"
         password9 = "지하수로"
         answer9 = "2"
-        password10 = ""
+        password10 = "길집"
         answer10 = "뱐뎅"
 
 
@@ -468,6 +468,7 @@ elif choice == "퀴즈풀기":
                     st.write("애칭은 아깅이 여러분들의 투표로 정해졌어(●'◡'●)")
                     st.write("아깅이들이 함께 해줘서 아기자기가 여기까지 성장할 수 있었어!")
                     st.write("앞으로도 잘 부탁해(´▽`ʃ♡ƪ)")
+                    st.write("8번 문제 오픈을 위한 비밀번호는 '1906' 이야!")
                 else :
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button7"):
