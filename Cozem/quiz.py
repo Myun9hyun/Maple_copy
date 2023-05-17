@@ -341,7 +341,7 @@ elif choice == "퀴즈풀기":
                         url = f"https://maple.gg/u/{character_name1}"
                         response = requests.get(url)
                         soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image1")["src"]
+                        img_url = soup.select_one(".character-image")["src"]
                         response = requests.get(img_url)
                         img = Image.open(BytesIO(response.content))
                         return  img
@@ -379,7 +379,7 @@ elif choice == "퀴즈풀기":
                         url = f"https://maple.gg/u/{character_name2}"
                         response = requests.get(url)
                         soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image2")["src"]
+                        img_url = soup.select_one(".character-image")["src"]
                         response = requests.get(img_url)
                         img = Image.open(BytesIO(response.content))
                         return  img
@@ -415,7 +415,7 @@ elif choice == "퀴즈풀기":
                         url = f"https://maple.gg/u/{character_name3}"
                         response = requests.get(url)
                         soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image3")["src"]
+                        img_url = soup.select_one(".character-image")["src"]
                         response = requests.get(img_url)
                         img = Image.open(BytesIO(response.content))
                         return  img
