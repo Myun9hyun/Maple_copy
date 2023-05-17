@@ -327,7 +327,7 @@ elif choice == "퀴즈풀기":
         quiz2_password = st.text_input("2번 문제 오픈을 위한 비밀번호를 입력해주세요!")
         if quiz2_password == password2:
             quiz2 = st.text_input("아기자기 길드의 길드마스터로, 디코에 자주 출몰하는 간부의 이름은?")
-            if st.button("정답 확인"):
+            if st.button("정답 확인", key = "check_answer_button2"):
                 if quiz2 == answer2:
                     st.balloons()
                     st.success("정답입니다!")
@@ -339,7 +339,7 @@ elif choice == "퀴즈풀기":
                     st.write("3번 문제 오픈을 위한 비밀번호는 '반디' 야!")
                 else :
                     st.warning("다시 한 번 생각해봐!")
-            if st.button("힌트 보기"):
+            if st.button("힌트 보기", key = "check_hint_button2"):
                 st.write("이 사람의 예전 직업은 '제로'였어!")
                 st.write("이 사람의 예전 본캐의 닉네임은 '반디풀잎' 이야!")
         elif quiz2_password != "" and quiz2_password != password2:
@@ -522,7 +522,7 @@ elif choice == "퀴즈풀기":
                     st.write("아깅이들도 길집에 자주 모여서 친해지고, 대화도 자주 했으면 좋겠어(☆▽☆)")
                 else : 
                     st.warning("다시 한 번 생각해봐!")
-            if st.button("힌트 보기", key = "check_answer_button9"):
+            if st.button("힌트 보기", key = "check_hint_button9"):
                 st.write("인게임 길드 소개글을 확인해봐!")
         elif quiz9_password != "" and quiz_password9 != password9:
             st.error("비밀번호가 틀렸어!")
@@ -542,7 +542,7 @@ elif choice == "퀴즈풀기":
                     st.write("스페셜 문제는 Special_Quiz탭에서 진행해줘!")
                 else:
                     st.warning("다시 한 번 생각해봐!")
-            if st.button("힌트 보기", key = "check_answer_button10"):
+            if st.button("힌트 보기", key = "check_hint_button10"):
                 st.write("[뱍뎅]과 이름이 매우 유사해!")
                 st.write("ㄱ과 ㄷ 사이에 들어갈 자음은 뭘까요?")
         elif quiz10_password != "" and quiz10_password != password10:
