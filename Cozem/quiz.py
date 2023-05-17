@@ -301,8 +301,7 @@ elif choice == "퀴즈풀기":
         answer9 = "2"
         password10 = "길집"
         answer10 = "뱐뎅"
-
-
+        
         st.write("1번 문제의 비밀번호는 공지방에서 알려주는 비밀번호를 확인해줘")
 
         # ----------------------------------------------------------------------------------------------------------
@@ -326,6 +325,19 @@ elif choice == "퀴즈풀기":
 
         # ----------------------------------------------------------------------------------------------------------
         # 2번
+        url = f'https://maple.gg/u/{뱌닢}'
+        def get_maple_info(뱌닢):
+            url = f"https://maple.gg/u/{뱌닢}"
+            response = requests.get(url)
+            soup = BeautifulSoup(response.content, "html.parser")
+
+            img_url = soup.select_one(".character-image")["src"]
+            response = requests.get(img_url)
+            img = Image.open(BytesIO(response.content))
+
+            return  img
+        
+        
         quiz2_password = st.text_input("2번 문제 오픈을 위한 비밀번호를 입력해주세요!")
         if quiz2_password == password2:
             quiz2 = st.text_input("아기자기 길드의 길드마스터로, 디코에 자주 출몰하는 간부의 이름은?")
@@ -333,7 +345,10 @@ elif choice == "퀴즈풀기":
                 if quiz2 == answer2:
                     st.balloons()
                     st.success("정답입니다!")
+                    
                     # st.image("메지지 이미지 넣기")
+                    img = get_maple_info(뱌닢)
+                    st.image(img, width=200)
                     st.write("[뱌닢]은 우리 길드의 길드마스터야!")
                     st.write("[뱌닢]은 길드를 위해 누구보다 열심히 일해😊")
                     st.write("[뱌닢]은 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
