@@ -732,7 +732,7 @@ elif choice == "퀴즈풀기":
                         present_list = present['Name'].tolist()
 
                         if st.button("당첨자 뽑기!!"):
-                            if len(present_list) < 3 and len(present_list) >= 0:
+                            if len(present_list) < 3 and len(present_list) > 0:
                                 st.write(present_list)
                                 st.write("남겨준 사람이 3명보다도 적어..")
                             elif len(present_list) == 0:
