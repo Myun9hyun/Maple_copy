@@ -345,26 +345,17 @@ elif choice == "퀴즈풀기":
                         url = f"https://maple.gg/u/{character_name}"
                         response = requests.get(url)
                         soup = BeautifulSoup(response.content, "html.parser")
-
-                        coord_items = soup.select(".character-coord__item")
-                        coord_list = []
-                        for item in coord_items:
-                            item_type = item.select_one(".character-coord__item-type").text.strip()
-                            item_name = item.select_one(".character-coord__item-name").text.strip()
-                            coord_list.append(f"{item_type}: {item_name}")
-
                         img_url = soup.select_one(".character-image")["src"]
                         response = requests.get(img_url)
                         img = Image.open(BytesIO(response.content))
 
-                        return coord_list, img
+                        return  img
 
                   
-                    coord_list, img = get_maple_info(character_name)
-                    st.write("코디 분석 결과:")
+                    img = get_maple_info(character_name)
+                    
                     st.image(img, width=200)
-                    for item in coord_list:
-                        st.write(item)
+                  
                     st.write("[뱌닢]은 우리 길드의 길드마스터야!")
                     st.write("[뱌닢]은 길드를 위해 누구보다 열심히 일해😊")
                     st.write("[뱌닢]은 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
