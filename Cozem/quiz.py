@@ -727,7 +727,7 @@ elif choice == "퀴즈풀기":
                     password_input = st.text_input('비밀번호를 입력해주세요 : ', key='pass41')
                     if password_input == password:
                         st.success('접근을 허용합니다')
-                        st.write("참여하신 분들 중 3명만 뽑겠습니다!")
+                        st.write("참여하신 분들 중 5명만 뽑겠습니다!")
                         present = data[data['Vote'] == '동의']
                         present_list = present['Name'].tolist()
 
@@ -738,8 +738,8 @@ elif choice == "퀴즈풀기":
                             elif len(present_list) == 0:
                                 st.write("아무도 남겨주지 않았어（；´д｀）ゞ")
                             else:
-                                random_names = random.sample(present_list, 3)
-                                st.write("당첨자 3분은 다음과 같습니다!!")
+                                random_names = random.sample(present_list, 5)
+                                st.write("당첨자 5분은 다음과 같습니다!!")
                                 st.write(random_names)
                     elif password_input != "" and password_input != password:
                         st.warning('비밀번호가 틀렸습니다.')
