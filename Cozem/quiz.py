@@ -294,11 +294,11 @@ elif choice == "퀴즈풀기":
         answer5 = "1"
         password6 = "커피"
         answer6 = "4"
-        password7 = ""
+        password7 = "듀블"
         answer7 = "아깅이"
         password8 = ""
         answer8 = "3"
-        password9 = ""
+        password9 = "지하수로"
         answer9 = "2"
         password10 = ""
         answer10 = "뱐뎅"
@@ -362,8 +362,6 @@ elif choice == "퀴즈풀기":
                     st.write("[릎샴]은 길드에서 포스터, 각종 양식틀, 길드규정문 등을 만드는 디자이너 역할을 하고 있어!")
                     st.write("[릎샴]은 이번 창설이벤트 경품으로 제공되는 물품도 만들었어!")
                     st.write("[릎샴]은 길드 이벤트, 공지글 작성 후 최종 검토해주는 역할도 하고 있어!")
-
-
                     st.write("4번 문제 오픈을 위한 비밀번호는 '금손' 이야!")
                 else : 
                     st.warning("다시 한 번 생각해봐!")
@@ -449,7 +447,7 @@ elif choice == "퀴즈풀기":
                     st.write("[영래곰]은 플래그 모든맵에서 1000점을 획득할 수 있는 플래그 고수야")
                     st.write("[영래곰]은 주기적으로 고확으로 길드원 모집을 하고 있어!")
                     st.write("[영래곰]은 여러캐릭으로 부족한 주간미션과 플래그 점수를 채워주고 있어!")
-                    st.write("7번 문제 오픈을 위한 비밀번호는 ") 
+                    st.write("7번 문제 오픈을 위한 비밀번호는 '듀블' 이야! ") 
                 else : 
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button6"):
@@ -495,6 +493,7 @@ elif choice == "퀴즈풀기":
                     st.success("정답입니다!")
                     st.write("노블레스 스킬 사용을 위해서는 주간미션을 3점이상 채워줘야해!")
                     st.write("그 외에는 지하수로를 점수 제한 없이 참여만 하면 되니까 잠깐씩만 시간 내서 참여해줘")
+                    st.write("9번 문제 오픈을 위한 비밀번호는 '지하수로'야! ")
                 else :
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button8"):
@@ -523,6 +522,7 @@ elif choice == "퀴즈풀기":
                     st.write("우리는 여기서 길드 사진을 찍기도 하고, 대화를 나누기도 해!")
                     st.write("헤도, 와헌등의 버프가 필요하면 길집에서 받을 수 있어(✿◡‿◡)")
                     st.write("아깅이들도 길집에 자주 모여서 친해지고, 대화도 자주 했으면 좋겠어(☆▽☆)")
+                    st.write("10번 문제 오픈을 위한 비밀번호는 '길집'이야! ")
                 else : 
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button9"):
@@ -556,7 +556,7 @@ elif choice == "퀴즈풀기":
     
     with tab3:
         password11 ="아깅이들고마워"
-        quiz11_password = st.text_input("11번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz11_password")
+        quiz11_password = st.text_input("스페셜 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz11_password")
         if quiz11_password == password11:
             st.write("와~! 여기까지 문제 푸느라 정말 고생 많았어!")
             st.write("우리 아기자기가 이렇게 유지되고 있는것은 아깅이들 덕분이야!")
