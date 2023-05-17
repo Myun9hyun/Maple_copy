@@ -676,7 +676,7 @@ elif choice == "퀴즈풀기":
                     password_input = st.text_input('비밀번호를 입력해주세요 : ', key='pass11')
                     if password_input == password:
                         st.success('접근을 허용합니다')
-                        st.write(data[['Name','Comment', 'Day']])
+                        st.write(data[['Name','Vote', 'Day']])
                         row_index = st.number_input('삭제하고 싶은 데이터의 번호를 입력해주세요', min_value=0, max_value=data.shape[0]-1)
                         st.write("Enter를 입력하면 삭제됩니다.")
                         if st.button('데이터 삭제'):
