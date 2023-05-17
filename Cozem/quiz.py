@@ -359,15 +359,12 @@ elif choice == "퀴즈풀기":
 
                         return coord_list, img
 
-                    if st.button("코디 분석"):
-                        if not character_name:
-                            st.warning("닉네임을 입력해주세요!")
-                        else:
-                            coord_list, img = get_maple_info(character_name)
-                            st.write("코디 분석 결과:")
-                            st.image(img, width=200)
-                            for item in coord_list:
-                                st.write(item)
+                  
+                        coord_list, img = get_maple_info(character_name)
+                        st.write("코디 분석 결과:")
+                        st.image(img, width=200)
+                        for item in coord_list:
+                            st.write(item)
                     st.write("[뱌닢]은 우리 길드의 길드마스터야!")
                     st.write("[뱌닢]은 길드를 위해 누구보다 열심히 일해😊")
                     st.write("[뱌닢]은 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
