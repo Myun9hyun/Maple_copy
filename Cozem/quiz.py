@@ -325,9 +325,9 @@ elif choice == "퀴즈풀기":
 
         # ----------------------------------------------------------------------------------------------------------
         # 2번
-        url = f'https://maple.gg/u/{뱌닢}'
+        url = f'https://maple.gg/u/뱌닢'
         def get_maple_info(뱌닢):
-            url = f"https://maple.gg/u/{뱌닢}"
+            url = f"https://maple.gg/u/뱌닢"
             response = requests.get(url)
             soup = BeautifulSoup(response.content, "html.parser")
 
