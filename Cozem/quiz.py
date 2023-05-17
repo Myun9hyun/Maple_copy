@@ -668,7 +668,7 @@ elif choice == "퀴즈풀기":
                         if st.button("당첨자 뽑기!!"):
                             random_names = random.sample(present_list, 3)
                             st.write("당첨자 3분은 다음과 같습니다!!")
-                            if present_list < 3 and present_list >= 0:
+                            if present_list < 3:
                                 st.write(present_list)
                                 st.write("남겨준 사람이 3명보다도 적어..")
                             elif present_list >= 3:
