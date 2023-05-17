@@ -163,8 +163,9 @@ elif choice == "길드페이지":
         #     st.image("Cozem/image/elinel.jpg", use_column_width=True)
     with tab2:
         st.header("📋길드 규정집📋")
-        st.image("Cozem/read_me_image/guide_new_1.jpg", use_column_width=True)
-        st.image("Cozem/read_me_image/guide_new_2.jpg", use_column_width=True)
+        # st.image("Cozem/read_me_image/guide_new_1.jpg", use_column_width=True)
+        # st.image("Cozem/read_me_image/guide_new_2.jpg", use_column_width=True)
+        st.image("Cozem/read_me_image/rule_new.jpg", use_column_width=True)
         # # PDF 파일의 URL을 입력받습니다.
         # st.write("pdf파일!")
         # pdf_url = "Cozem/rule/아기자기_길드_규정_2023.pdf"
