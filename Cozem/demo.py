@@ -81,6 +81,7 @@ def main():
     vote = st.number_input("투표 수", min_value=0)
     day = st.text_input("요일")
     if st.button("추가"):
+        global data
         data = add_data(name, vote, day)
         st.write("데이터를 추가했습니다.")
         save_data(data)
