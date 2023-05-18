@@ -41,12 +41,12 @@ def clear_data():
     return data
 
 # 데이터 삭제 함수
-def delete_data(data, row_index):
+def delete_data(row_index):
     data = data.drop(index=row_index).reset_index(drop=True)
     return data
 
 # 데이터 추가 함수
-def add_data(data, name, vote, day):
+def add_data(name, vote, day):
     new_data = pd.DataFrame({'Name': [name], 'Vote': [vote], 'Day': [day]})
     data = pd.concat([data, new_data], ignore_index=True)
     return data
