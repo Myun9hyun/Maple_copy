@@ -81,7 +81,7 @@ def main():
     vote = st.number_input("투표 수", min_value=0)
     day = st.text_input("요일")
     if st.button("추가"):
-        data = add_data(data, name, vote, day)
+        data = add_data(name, vote, day)
         st.write("데이터를 추가했습니다.")
         st.write(data)
 
@@ -89,7 +89,7 @@ def main():
     st.subheader("데이터 삭제")
     row_index = st.number_input("삭제할 행 인덱스", min_value=0, max_value=len(data) - 1, step=1)
     if st.button("삭제"):
-        data = delete_data(data, row_index)
+        data = delete_data(row_index)
         st.write("데이터를 삭제했습니다.")
         st.write(data)
 
