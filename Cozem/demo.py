@@ -48,7 +48,7 @@ def delete_data(row_index):
 # 데이터 추가 함수
 def add_data(name, vote, day):
     new_data = pd.DataFrame({'Name': [name], 'Vote': [vote], 'Day': [day]})
-    data = pd.concat([data, new_data], ignore_index=True)
+    data = pd.concat([new_data], ignore_index=True)
     return data
 
 # 불러온 데이터를 전역 변수로 저장
