@@ -25,7 +25,7 @@ import os
 import streamlit as st
 import pandas as pd
 
-FILE_PATH = 'data.csv'
+FILE_PATH = 'data11.csv'
 
 # 데이터를 파일에서 불러오기
 def load_data():
