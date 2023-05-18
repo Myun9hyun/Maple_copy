@@ -1,7 +1,24 @@
+import random
 import streamlit as st
+from PIL import Image, ImageDraw, ImageFont
+import requests
 import pandas as pd
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import matplotlib.pyplot as plt
+# import joblib
+import seaborn as sns
+from streamlit_option_menu import option_menu
 import os
-
+import openpyxl
+from io import BytesIO
+import base64
+import datetime
+import PyPDF2
+import fitz
+from bs4 import BeautifulSoup
 FILE_PATH = 'data11.csv'
 
 # 데이터를 파일에서 불러오기
