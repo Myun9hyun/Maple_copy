@@ -56,7 +56,7 @@ def main():
     if st.button("데이터 초기화"):
         data = clear_data()
         st.write("데이터를 초기화했습니다.")
-        st.dataframe(data)
+        st.write(data)
 
     # 데이터 추가 폼
     st.subheader("데이터 추가")
