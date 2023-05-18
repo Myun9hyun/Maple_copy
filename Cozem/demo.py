@@ -22,8 +22,10 @@ from bs4 import BeautifulSoup
 import streamlit as st
 import pandas as pd
 import os
+import streamlit as st
+import pandas as pd
 
-FILE_PATH = 'data11.csv'
+FILE_PATH = 'data.csv'
 
 # 데이터를 파일에서 불러오기
 def load_data():
@@ -40,23 +42,18 @@ def save_data(data):
 # 데이터 초기화 함수
 def clear_data():
     data = pd.DataFrame(columns=['Name', 'Vote', 'Day'])
-    # 파일 삭제
-    os.remove(FILE_PATH)
     return data
 
 # 데이터 삭제 함수
-def delete_data(row_index):
+def delete_data(data, row_index):
     data = data.drop(index=row_index).reset_index(drop=True)
     return data
 
 # 데이터 추가 함수
-def add_data(name, vote, day):
-    global data
+def add_data(data, name, vote, day):
     new_data = pd.DataFrame({'Name': [name], 'Vote': [vote], 'Day': [day]})
     data = pd.concat([data, new_data], ignore_index=True)
-
-# 불러온 데이터를 전역 변수로 저장
-data = load_data()
+    return data
 
 # Streamlit 애플리케이션 구현
 def main():
@@ -85,8 +82,7 @@ def main():
     vote = st.number_input("투표 수", min_value=0)
     day = st.text_input("요일")
     if st.button("추가"):
-        add_data(name, vote, day)
-        save_data(data)
+        data = add_data(data, name, vote, day)
         st.write("데이터를 추가했습니다.")
         st.write(data)
 
@@ -94,10 +90,10 @@ def main():
     st.subheader("데이터 삭제")
     row_index = st.number_input("삭제할 행 인덱스", min_value=0, max_value=len(data) - 1, step=1)
     if st.button("삭제"):
-        data = delete_data(row_index)
-        save_data(data)
+        data = delete_data(data, row_index)
         st.write("데이터를 삭제했습니다.")
         st.write(data)
 
 if __name__ == '__main__':
+    data = load_data()
     main()
