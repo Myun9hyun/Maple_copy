@@ -13,10 +13,10 @@ def download_file(url, file_path):
 CSV_URL = 'https://raw.githubusercontent.com/Myun9hyun/Maple_copy/main/Cozem/data11.csv'
 FILE_PATH = 'data11.csv'
 
-if not os.path.exists(FILE_PATH):
-    st.write('빈 CSV 파일 다운로드 중...')
-    download_file(CSV_URL, FILE_PATH)
-    st.write('빈 CSV 파일 다운로드 완료')
+# if not os.path.exists(FILE_PATH):
+#     st.write('빈 CSV 파일 다운로드 중...')
+#     download_file(CSV_URL, FILE_PATH)
+#     st.write('빈 CSV 파일 다운로드 완료')
 
 options = ["닉네임 남기기➕", "닉네임 조회🔎", "닉네임 삭제✂", "초기화💣", "추첨하기🎊"]
 option = st.selectbox("기능 선택", options, key='select3')
