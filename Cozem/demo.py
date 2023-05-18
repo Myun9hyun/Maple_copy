@@ -83,6 +83,7 @@ def main():
     if st.button("추가"):
         data = add_data(name, vote, day)
         st.write("데이터를 추가했습니다.")
+        save_data(data)
         st.write(data)
 
     # 데이터 삭제 폼
