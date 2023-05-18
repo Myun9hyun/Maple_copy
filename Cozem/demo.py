@@ -45,7 +45,7 @@ def main():
     if st.button("데이터 불러오기"):
         data = load_data()
         st.write("데이터를 불러왔습니다.")
-        st.dataframe(data)
+        st.write(data)
 
     # 데이터 저장하기 버튼
     if st.button("데이터 저장하기"):
@@ -74,7 +74,7 @@ def main():
     if st.button("삭제"):
         data = delete_data(data, row_index)
         st.write("데이터를 삭제했습니다.")
-        st.dataframe(data)
+        st.write(data)
 
 if __name__ == '__main__':
     main()
