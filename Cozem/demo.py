@@ -19,6 +19,10 @@ import datetime
 import PyPDF2
 import fitz
 from bs4 import BeautifulSoup
+import streamlit as st
+import pandas as pd
+import os
+
 FILE_PATH = 'data11.csv'
 
 # 데이터를 파일에서 불러오기
@@ -49,8 +53,7 @@ def delete_data(row_index):
 def add_data(name, vote, day):
     global data
     new_data = pd.DataFrame({'Name': [name], 'Vote': [vote], 'Day': [day]})
-    data = pd.concat([new_data], ignore_index=True)
-    return data
+    data = pd.concat([data, new_data], ignore_index=True)
 
 # 불러온 데이터를 전역 변수로 저장
 data = load_data()
@@ -82,9 +85,9 @@ def main():
     vote = st.number_input("투표 수", min_value=0)
     day = st.text_input("요일")
     if st.button("추가"):
-        data = add_data(name, vote, day)
-        st.write("데이터를 추가했습니다.")
+        add_data(name, vote, day)
         save_data(data)
+        st.write("데이터를 추가했습니다.")
         st.write(data)
 
     # 데이터 삭제 폼
