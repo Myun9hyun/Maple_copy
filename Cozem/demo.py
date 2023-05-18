@@ -91,6 +91,7 @@ def main():
     row_index = st.number_input("삭제할 행 인덱스", min_value=0, max_value=len(data) - 1, step=1)
     if st.button("삭제"):
         data = delete_data(row_index)
+        save_data(data)
         st.write("데이터를 삭제했습니다.")
         st.write(data)
 
