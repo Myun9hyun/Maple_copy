@@ -816,7 +816,7 @@ elif choice == "아카이브":
         col9, col10 = st.columns(2)            
         with col9:
             st.write("**귀여운 셀카(*/ω＼*)**")
-            st.image("Cozem/image/hide_and_seek.jpg", use_column_width=True)
+            st.image("Cozem/image/selfi.jpg", use_column_width=True)
         with col10:
             st.write("**과거 단체수로 시절 마지막 수로 입장 전 사진!**")
             st.image("Cozem/image/suro.png", use_column_width=True)
