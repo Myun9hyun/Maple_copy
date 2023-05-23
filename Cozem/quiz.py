@@ -45,9 +45,9 @@ x = text_width - 100
 y = height - text_height - 200
 z = height - text_height - 255
 x_ver = width - text_width + 50
-y_ver = height - text_height - 70
+y_ver = height - text_height - 50
 x_made = width - text_width + 10
-y_made = height - text_height - 100
+y_made = height - text_height - 30
 # 테두리가 있는 텍스트 그리기
 
 # # 아기자기 글씨 구현
