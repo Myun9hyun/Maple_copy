@@ -46,7 +46,7 @@ y = height - text_height - 200
 z = height - text_height - 255
 x_ver = width - text_width - 70
 y_ver = height - text_height - 10
-x_made = width - text_width - 10
+x_made = width - text_width - 70
 y_made = height - text_height - 50
 # 테두리가 있는 텍스트 그리기
 
