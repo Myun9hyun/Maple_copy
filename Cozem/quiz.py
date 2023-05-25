@@ -265,12 +265,12 @@ elif choice == "퀴즈풀기":
     tab1, tab2, tab3= st.tabs(["Readme", "Quiz", "Special_Quiz"])
     with tab1:
         st.header("길드 창설이벤트 퀴즈 풀기!")
-        st.write("아래의 글을 먼저 잘 읽고 참여하길 바래!")
+        st.write("❗아래의 글을 먼저 잘 읽고 참여하길 바래❗")
         st.write("우리 아기자기가 창설 4주년을 맞아 퀴즈 이벤트를 준비해봤어!")
-        st.write("우리 아기자기와 항상 함께해준 아깅이들 정말 고마워!")
+        st.write("우리 아기자기와 항상 함께해준 아깅이들 정말 고마워!(❁´◡`❁)")
         st.write("이번 창설 이벤트는 참여 조건이 기여도 15만 이상의 아깅이들만 참석할 수 있어!")
         st.write("창설이벤트에 참석하지 못하더라도, 왼쪽 메뉴에서 '의견남기기'탭에 들어가 의견을 남겨줘!")
-        st.write("의견을 남겨준 길드원 전원에게 코어젬스톤 5개씩 지급할게!")
+        st.write("의견을 남겨준 길드원 전원에게 코어젬스톤💎 5개씩 지급할게!")
         st.write("Quiz탭에 들어가서 문제를 순서대로 풀면 돼!")
         st.write("첫번째 문제의 비밀번호는 공지방에 시간에 맞춰 공개될거야!")
         
@@ -331,7 +331,7 @@ elif choice == "퀴즈풀기":
         
         quiz2_password = st.text_input("2번 문제 오픈을 위한 비밀번호를 입력해주세요!")
         if quiz2_password == password2:
-            quiz2 = st.text_input("아기자기 길드의 길드마스터로, 디코에 자주 출몰하는 간부의 이름은?")
+            quiz2 = st.text_input("아기자기 길드의 길드마스터👑로, 디코에 자주 출몰하는 간부의 이름은?")
             if st.button("정답 확인", key = "check_answer_button2"):
                 if quiz2 == answer2:
                     st.balloons()
@@ -370,7 +370,7 @@ elif choice == "퀴즈풀기":
 
         quiz3_password = st.text_input("3번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz3_password3")
         if quiz3_password == password3:
-            quiz3 = st.text_input("이번 메이플 팬페스트 금손 부스에 참석한 간부는 누구일까?")
+            quiz3 = st.text_input("이번 메이플 팬페스트 금손✍️ 부스에 참석한 간부는 누구일까?")
             if st.button("정답 확인", key= "check_answer_button3"):
                 if quiz3 == answer3:
                     st.balloons()
@@ -406,7 +406,7 @@ elif choice == "퀴즈풀기":
         url = f'https://maple.gg/u/{character_name3}'
         quiz4_password = st.text_input("4번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz4_password")
         if quiz4_password == password4:
-            quiz4 = st.text_input("이 페이지 누가 만들었을까?")
+            quiz4 = st.text_input("이 페이지👨‍💻 누가 만들었을까?")
             if st.button("정답 확인", key="check_answer_button4"):
                 if quiz4 == answer4:
                     st.balloons()
@@ -476,7 +476,7 @@ elif choice == "퀴즈풀기":
                 else  :
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button5"):
-                st.write("나는 연유가 들어간 커피야!")
+                st.write("나는 연유가 들어간 커피☕야!")
         elif quiz5_password != "" and quiz5_password != password5:
             st.error("비밀번호가 틀렸어!")
 
@@ -491,10 +491,10 @@ elif choice == "퀴즈풀기":
             st.write("나의 직업은 '모험가 도적군'이야")
             st.write("나는 레벨이 280을 넘었어!")
             st.write("나는 누구일까요?")
-            st.write("1. 영래닭")
-            st.write("2. 영래소")
-            st.write("3. 영래모기")
-            st.write("4. 영래곰")
+            st.write("1. 영래닭🐔")
+            st.write("2. 영래소🐮")
+            st.write("3. 영래모기🦟")
+            st.write("4. 영래곰🐻")
             if st.button("정답 확인", key = "check_answer_button6"):
                 if quiz6 == answer6:
                     st.balloons()
@@ -579,7 +579,7 @@ elif choice == "퀴즈풀기":
             st.write("아기자기 길드의 길드집은 어디일까?")
             st.write("보기")
             st.write("1. Ch.18 셀라스")       
-            st.write("2. Ch.18 리나의 집")       
+            st.write("2. Ch.18 리나의 집🏠")       
             st.write("3. Ch.18 헤네시스 공원")       
             st.write("4. Ch.18 세르니움 광장")       
             st.write("5. Ch.18 이름없는 마을")       
@@ -609,7 +609,7 @@ elif choice == "퀴즈풀기":
                     st.balloons()
                     st.success("정답입니다!")
                     st.write("[뱐뎅]님은 우리 아기자기에서 길드원들 중에서 기여도가 제일 높아!")
-                    st.write("[뱐뎅]님의 기여도는 무려 ()나 돼!┗|｀O′|┛")
+                    st.write("[뱐뎅]님의 기여도는 무려 300만이 넘어!┗|｀O′|┛")
                     st.write("스페셜 문제 오픈을 위한 비밀번호는 '아깅이들고마워'야!")
                     st.write("스페셜 문제는 Special_Quiz탭에서 진행해줘!")
                 else:
@@ -624,6 +624,7 @@ elif choice == "퀴즈풀기":
     # 11번    
     
     with tab3:
+        st.header("🎉Special Quiz")
         password11 ="아깅이들고마워"
         quiz11_password = st.text_input("스페셜 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz11_password")
         if quiz11_password == password11:
@@ -645,7 +646,7 @@ elif choice == "퀴즈풀기":
                 try: 
                     data = pd.read_csv(FILE_PATH)
                 except FileNotFoundError:
-                    data = pd.DataFrame(columns=['Name', 'Vote', 'Day'])
+                    data = pd.DataFrame(columns=['Name', 'Vote', 'Address'])
                 return data
 
             # 데이터를 파일에 저장하기
@@ -655,7 +656,7 @@ elif choice == "퀴즈풀기":
             # 데이터 초기화 함수
             def clear_data():
                 global data
-                data = pd.DataFrame(columns=['Name', 'Vote', 'Day'])
+                data = pd.DataFrame(columns=['Name', 'Vote', 'Address'])
                 # 파일 삭제
                 os.remove(FILE_PATH)
 
@@ -668,7 +669,7 @@ elif choice == "퀴즈풀기":
             data = load_data()
             def add_data(name, vote, day):
                 global data
-                new_data = pd.DataFrame({'Name': [name], 'Vote': [vote], 'Day': [day]})
+                new_data = pd.DataFrame({'Name': [name], 'Vote': [vote], 'Address': [address]})
                 data = pd.concat([data, new_data], ignore_index=True)
             def main():
                 if option == "닉네임 삭제✂":
@@ -676,7 +677,7 @@ elif choice == "퀴즈풀기":
                     password_input = st.text_input('비밀번호를 입력해주세요 : ', key='pass11')
                     if password_input == password:
                         st.success('접근을 허용합니다')
-                        st.write(data[['Name','Vote', 'Day']])
+                        st.write(data[['Name','Vote', 'Address']])
                         row_index = st.number_input('삭제하고 싶은 데이터의 번호를 입력해주세요', min_value=0, max_value=data.shape[0]-1)
                         st.write("Enter를 입력하면 삭제됩니다.")
                         if st.button('데이터 삭제'):
@@ -690,11 +691,9 @@ elif choice == "퀴즈풀기":
                 elif option == "닉네임 남기기➕":
                     name = st.text_input("닉네임을 남겨주세요")
                     vote = st.radio("주소 제공에 동의하시나요? 비동의에 체크시, 추첨에서 제외됩니다!",('동의', '비동의'))
-                    day = st.date_input(
-                        "남기시는 날짜를 설정해주세요",
-                        datetime.date.today())
+                    address = st.text_input("배송 받으실 주소를 입력해주세요(비동의시 '비동의'라고 작성해주세요)")
                     if st.button('닉네임 남기기'):
-                        add_data(name, vote, day)
+                        add_data(name, vote, address)
                         save_data(data)
                         st.success("참여해주셔서 감사합니다!!ヾ(•ω•`)o")
 
