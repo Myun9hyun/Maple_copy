@@ -667,7 +667,7 @@ elif choice == "퀴즈풀기":
 
             # 불러온 데이터를 전역 변수로 저장
             data = load_data()
-            def add_data(name, vote, day):
+            def add_data(name, vote, address):
                 global data
                 new_data = pd.DataFrame({'Name': [name], 'Vote': [vote], 'Address': [address]})
                 data = pd.concat([data, new_data], ignore_index=True)
