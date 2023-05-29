@@ -596,7 +596,7 @@ elif choice == "퀴즈풀기":
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button9"):
                 st.write("인게임 길드 소개글을 확인해봐!")
-        elif quiz9_password != "" and quiz_password9 != password9:
+        elif quiz9_password != "" and quiz9_password != password9:
             st.error("비밀번호가 틀렸어!")
 
         # ----------------------------------------------------------------------------------------------------------
