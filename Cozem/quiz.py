@@ -429,7 +429,7 @@ elif choice == "퀴즈풀기":
                     st.write("[둥둥향]은 페이스북 '스카니아모임'에 길드 홍보 멘트를 작성했어!")
                     st.write("5번 문제 오픈을 위한 비밀번호는 '둥둥'이야!")
                 else :
-                    st.error("다시 한번 생각해봐!")
+                    st.warning("다시 한번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button4"):
                 st.write("이 사람의 직업은 캐논마스터야!")
                 st.write("이 사람은 공지방에서 이벤트 알림이 역할을 하고 있어!")
