@@ -212,7 +212,7 @@ elif choice == "길드페이지":
             if mulung_element:
                 mulung_floor = mulung_element.select_one('.user-summary-floor').text.strip().split()[0]
                 mulung_duration = mulung_element.select_one('.user-summary-duration').text.strip()
-                mulung_info = f'{mulung_floor} ({mulung_duration})'
+                mulung_info = f'{mulung_floor} 층({mulung_duration})'
             else:
                 mulung_info = 'Not found'
 
