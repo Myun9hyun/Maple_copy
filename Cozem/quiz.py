@@ -640,6 +640,9 @@ elif choice == "퀴즈풀기":
             st.write("당첨된 인원들이 알려주는 주소는 배송목적으로만 사용할 뿐, 절대 유출되지도 않고 개인 목적으로 사용하지 않아")
             st.write("배송 후에는 바로 제공받은 주소를 파기할 예정이야")
             st.write("참여해줘서 정말 고마워!")
+            st.write("아래는 작성 예시야!")
+            st.image("Cozem/image/agree_example.png")
+            st.image("Cozem/image/disagree_example.png")
            
             FILE_PATH = 'data.csv'
             options = ["닉네임 남기기➕", "닉네임 조회🔎", "닉네임 삭제✂", "초기화💣","추첨하기🎊" ]
