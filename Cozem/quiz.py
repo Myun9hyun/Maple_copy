@@ -644,10 +644,10 @@ elif choice == "퀴즈풀기":
             col1, col2=st.columns(2)
             with col1:
                 st.write("**동의시**")
-                st.image("Cozem/image/disagree_example.png")
+                st.image("Cozem/image/agree_example.png")
             with col2:
                 st.write("**비동의시**")
-                st.image("Cozem/image/agree_example.png")
+                st.image("Cozem/image/disagree_example.png")
             
             
            
