@@ -273,6 +273,7 @@ elif choice == "퀴즈풀기":
         st.write("의견을 남겨준 길드원 전원에게 코어젬스톤💎 5개씩 지급할게!")
         st.write("Quiz탭에 들어가서 문제를 순서대로 풀면 돼!")
         st.write("첫번째 문제의 비밀번호는 공지방에 시간에 맞춰 공개될거야!")
+        st.image("Cozem/image/anniversary_event.jpeg", use_column_width=True)
         
         
         
