@@ -649,7 +649,7 @@ elif choice == "퀴즈풀기":
                 st.write("**비동의시**")
                 st.image("Cozem/image/disagree_example.png")
             
-            
+            st.write("---")
            
             FILE_PATH = 'data.csv'
             options = ["닉네임 남기기➕", "닉네임 조회🔎", "닉네임 삭제✂", "초기화💣","추첨하기🎊" ]
