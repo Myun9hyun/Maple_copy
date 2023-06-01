@@ -641,8 +641,15 @@ elif choice == "퀴즈풀기":
             st.write("배송 후에는 바로 제공받은 주소를 파기할 예정이야")
             st.write("참여해줘서 정말 고마워!")
             st.write("아래는 작성 예시야!")
-            st.image("Cozem/image/agree_example.png")
-            st.image("Cozem/image/disagree_example.png")
+            col1, col2=st.columns(2)
+            with col1:
+                st.write("**동의시**")
+                st.image("Cozem/image/disagree_example.png")
+            with col2:
+                st.write("**비동의시**")
+                st.image("Cozem/image/agree_example.png")
+            
+            
            
             FILE_PATH = 'data.csv'
             options = ["닉네임 남기기➕", "닉네임 조회🔎", "닉네임 삭제✂", "초기화💣","추첨하기🎊" ]
