@@ -265,7 +265,7 @@ elif choice == "길드페이지":
 elif choice == "퀴즈풀기":
     tab1, tab2, tab3= st.tabs(["Readme", "Quiz", "Special_Quiz"])
     with tab1:
-        st.header("길드 창설이벤트 퀴즈 풀기!")
+        st.header("🗒️길드 창설이벤트 퀴즈 풀기!🗒️")
         st.write("**❗아래의 글을 먼저 잘 읽고 참여하길 바래❗**")
         st.write("우리 아기자기가 창설 4주년을 맞아 퀴즈 이벤트를 준비해봤어!")
         st.write("우리 아기자기와 항상 함께해준 아깅이들 정말 고마워!(❁´◡`❁)")
@@ -292,7 +292,7 @@ elif choice == "퀴즈풀기":
         
         
     with tab2:
-        st.header( "길드 창설이벤트 퀴즈 풀기!")
+        st.header( "🗒️길드 창설이벤트 퀴즈 풀기!🗒️")
         st.write("#### 창설이벤트에 참가해준 아깅이들 모두 반가워!")
         password = "970808"
         password1 = "창설이벤트"
