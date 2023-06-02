@@ -31,7 +31,7 @@ width, height = image.size
 draw = ImageDraw.Draw(image)
 text_kor = "아기자기"
 text_eng = "Welcome to"
-text_ver = "updated_05.23"
+text_ver = "updated_06.01"
 text_madeby = "@둥둥향"
 font_kor = ImageFont.truetype("Cozem/font/NanumSquareNeo-eHv.ttf", 50)
 font_eng = ImageFont.truetype("Cozem/font/ARIAL.TTF", 50)
@@ -272,10 +272,11 @@ elif choice == "퀴즈풀기":
         st.write("창설이벤트에 참석하지 못하더라도, 왼쪽 메뉴에서 '의견남기기'탭에 들어가 의견을 남겨줘!")
         st.write("의견을 남겨준 길드원 전원에게 코어젬스톤💎 5개씩 지급할게!")
         st.write("Quiz탭에 들어가서 문제를 순서대로 풀면 돼!")
+        st.write("문제 오픈을 위한 비밀번호는 문제를 풀면 순차적으로 공개되게 해놓았어!😁")
         st.write("첫번째 문제의 비밀번호는 공지방에 시간에 맞춰 공개될거야!")
         st.image("Cozem/image/anniversary_event.jpeg", use_column_width=True)
         st.write("### 당첨 물품 예시!")
-        st.write("물품은 다음의 품목들 중에서 랜덤으로 지급 될 예정이야")
+        st.write("물품은 다음의 인포 중에서 랜덤으로 지급 될 예정이야")
         col1, col2=st.columns(2)
         with col1:
             st.image("Cozem/image/product_example.jpeg")
