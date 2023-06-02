@@ -661,7 +661,7 @@ elif choice == "퀴즈풀기":
                 st.image("Cozem/image/disagree_example.png")
             
             st.write("---")
-            st.write("#### ➡️닉네임 입력 창⬅️")
+            st.write("### 닉네임 입력 창")
             FILE_PATH = 'data.csv'
             options = ["닉네임 남기기➕", "닉네임 조회🔎", "닉네임 삭제✂", "초기화💣","추첨하기🎊" ]
             option = st.selectbox("기능 선택", options, key='select3')
