@@ -776,6 +776,7 @@ elif choice == "퀴즈풀기":
 
 elif choice == "아카이브":
     st.header("길드 아카이브")
+    st.write("메뉴를 선택하면 길드 홍보 포스터 혹은, 사진을 선택해서 보실 수 있습니다!")
     options = st.selectbox(
     '원하는 종류를 골라주세요',
     ('포스터', '길드사진'))
