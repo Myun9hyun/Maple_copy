@@ -274,7 +274,7 @@ elif choice == "퀴즈풀기":
         st.write("Quiz탭에 들어가서 문제를 순서대로 풀면 돼!")
         st.write("첫번째 문제의 비밀번호는 공지방에 시간에 맞춰 공개될거야!")
         st.image("Cozem/image/anniversary_event.jpeg", use_column_width=True)
-        st.write("####당첨 물품 예시!")
+        st.write("###당첨 물품 예시!")
         st.write("물품은 다음의 품목들 중에서 랜덤으로 지급 될 예정이야")
         st.image("Cozem/image/product_example.jpeg", use_column_width=True)
         col1, col2=st.columns(2)
