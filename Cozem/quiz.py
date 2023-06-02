@@ -179,7 +179,8 @@ elif choice == "길드페이지":
         #             image = Image.frombytes("RGB", [pixmap.width, pixmap.height], pixmap.samples)
         #             st.image(image, caption=f"Page {i+1}", use_column_width=True)
     with tab3:
-        st.header("메이플지지 검색")
+        st.header("🍁메이플지지 검색🍁")
+        st.write("메이플 지지 검색결과를 아래를 통해 확인 할 수 있습니다")
 
         # 검색할 캐릭터 이름
         character_name = st.text_input("닉네임을 입력해주세요 : ")
@@ -265,7 +266,7 @@ elif choice == "퀴즈풀기":
     tab1, tab2, tab3= st.tabs(["Readme", "Quiz", "Special_Quiz"])
     with tab1:
         st.header("길드 창설이벤트 퀴즈 풀기!")
-        st.write("❗아래의 글을 먼저 잘 읽고 참여하길 바래❗")
+        st.write("** ❗아래의 글을 먼저 잘 읽고 참여하길 바래❗ **")
         st.write("우리 아기자기가 창설 4주년을 맞아 퀴즈 이벤트를 준비해봤어!")
         st.write("우리 아기자기와 항상 함께해준 아깅이들 정말 고마워!(❁´◡`❁)")
         st.write("이번 창설 이벤트는 참여 조건이 기여도 15만 이상의 아깅이들만 참석할 수 있어!")
@@ -775,7 +776,7 @@ elif choice == "퀴즈풀기":
                 main()
 
 elif choice == "아카이브":
-    st.header("길드 아카이브")
+    st.header("🎨길드 아카이브📸")
     st.write("메뉴를 선택하면 길드 홍보 포스터 혹은, 사진을 선택해서 보실 수 있습니다!")
     options = st.selectbox(
     '원하는 종류를 골라주세요',
