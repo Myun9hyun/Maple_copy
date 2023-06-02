@@ -278,15 +278,15 @@ elif choice == "퀴즈풀기":
         st.write("물품은 다음의 품목들 중에서 랜덤으로 지급 될 예정이야")
         st.image("Cozem/image/product_example.jpeg", use_column_width=True)
         col1, col2=st.columns(2)
-            with col1:
-                st.image("Cozem/image/product_example.jpeg")
-            with col2:
-                st.image("Cozem/image/product_example2.jpeg")
+        with col1:
+            st.image("Cozem/image/product_example.jpeg")
+        with col2:
+            st.image("Cozem/image/product_example2.jpeg")
         col3, col4 = st.columns(2)
-            with col3:
-                st.image("Cozem/image/product_example3.jpeg")
-            with col4:
-                st.image("Cozem/image/product_example4.jpeg")
+        with col3:
+            st.image("Cozem/image/product_example3.jpeg")
+        with col4:
+            st.image("Cozem/image/product_example4.jpeg")
             
         
         
