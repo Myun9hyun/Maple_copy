@@ -286,9 +286,9 @@ elif choice == "퀴즈풀기":
             st.image("Cozem/image/product_example2.jpeg")
         col3, col4 = st.columns(2)
         with col3:
-            st.image("Cozem/image/product_example3.jpeg")
+            st.image("Cozem/image/info_1.jpg")
         with col4:
-            st.image("Cozem/image/product_example4.jpeg")
+            st.image("Cozem/image/info_2.jpg")
             
         
         
@@ -646,12 +646,12 @@ elif choice == "퀴즈풀기":
             st.write("와~! 여기까지 문제 푸느라 정말 고생 많았어!👏👏")
             st.write("우리 아기자기가 이렇게 유지되고 있는것은 아깅이들 덕분이야!")
             st.write("정말 고맙다는 마음 다시 한번 전하고 싶어!（づ￣3￣）づ╭❤️～")
-            st.write("#### **⭐️참여 방법⭐️**")
-            st.write("1. 맨아래 '닉네임 입력 창'에 '닉네임 남기기'를 선택한다")
-            st.write("2. Special_Quiz를 풀고 있는 아깅이의 닉네임을 적는다.")
-            st.write("3. 아깅이들의 실제 주소 제공여부를 동의/비동의 중에서 선택한다.")
-            st.write("4. 아깅이들이 '실제 거주하고 있는 주소'를 남긴다")
-            st.write("5. '닉네임 남기기' 버튼을 누르면 끝!")
+            # st.write("#### **⭐️참여 방법⭐️**")
+            # st.write("1. 맨아래 '닉네임 입력 창'에 '닉네임 남기기'를 선택한다")
+            # st.write("2. Special_Quiz를 풀고 있는 아깅이의 닉네임을 적는다.")
+            # st.write("3. 아깅이들의 실제 주소 제공여부를 동의/비동의 중에서 선택한다.")
+            # st.write("4. 아깅이들이 '실제 거주하고 있는 주소'를 남긴다")
+            # st.write("5. '닉네임 남기기' 버튼을 누르면 끝!")
             st.write("#### **❗️주의사항❗️**")
             st.write("주소를 알려주지 않는 인원들(비동의를 체크한)은 아쉽지만 상품을 배송해 줄 수 없어 추첨에서는 제외돼(T_T)")
             st.write("닉네임과 주소를 적어준 인원들 중 5명을 추첨을 통해 뽑을거야")
