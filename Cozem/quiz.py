@@ -286,9 +286,9 @@ elif choice == "퀴즈풀기":
             st.image("Cozem/image/product_example2.jpeg")
         col3, col4 = st.columns(2)
         with col3:
-            st.image("Cozem/image/info_1.jpg")
+            st.image("Cozem/image/info_3.png")
         with col4:
-            st.image("Cozem/image/info_2.jpg")
+            st.image("Cozem/image/info_4.png")
             
         
         
