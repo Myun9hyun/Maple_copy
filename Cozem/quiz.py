@@ -643,7 +643,7 @@ elif choice == "퀴즈풀기":
         password11 ="아깅이들고마워"
         password_blank11 = "아깅이들 고마워"
         quiz11_password = st.text_input("스페셜 문제 오픈을 위한 비밀번호를 **띄어쓰기 없이** 입력해주세요!", key = "quiz11_password")
-        if quiz11_password == password11 or password_blank11:
+        if quiz11_password == password11:
             st.write("와~! 여기까지 문제 푸느라 정말 고생 많았어!👏👏")
             st.write("우리 아기자기가 이렇게 유지되고 있는것은 아깅이들 덕분이야!")
             st.write("정말 고맙다는 마음 다시 한번 전하고 싶어!（づ￣3￣）づ╭❤️～")
