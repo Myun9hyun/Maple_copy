@@ -22,7 +22,7 @@ from bs4 import BeautifulSoup
 
 
 st.set_page_config(page_title="BanShamDoongDolYoung", page_icon=":rabbit:", layout="wide")
-password = "970808"
+
 password_test = "1234"
 
 image = Image.open("Cozem/image/banner.jpg")
@@ -91,7 +91,7 @@ def set_BGM(bgm):
 
 # # streamlit에 이미지 표시
 st.image(image, use_column_width=True)
-
+password = "970808"
 with st.sidebar:
     choice = option_menu("Menu", ["메인페이지", "길드페이지", "퀴즈풀기", "아카이브", "의견남기기"],
                          icons=['house', 'bi bi-emoji-smile', 'bi bi-lightbulb', 'bi bi-palette','bi bi-archive', 'bi bi-card-text'],
