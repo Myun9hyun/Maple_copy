@@ -315,7 +315,7 @@ elif choice == "퀴즈풀기":
         password9 = "지하수로"
         answer9 = "2"
         password10 = "길집"
-        answer10 = "뱐뎅"
+        answer10 = "4"
         
         st.write("1번 문제의 비밀번호는 공지방에서 알려주는 비밀번호를 확인해줘")
 
@@ -617,7 +617,13 @@ elif choice == "퀴즈풀기":
         # 10번    
         quiz10_password = st.text_input("10번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz10_password")
         if quiz10_password == password10:
-            quiz10 = st.text_input("우리 아기자기에서 길드원들 중 기여도가 제일 높은 사람의 닉네임을 적어줘!")
+            quiz10 = st.text_input("문제를 읽고, 아래의 보기에서 정답을 '숫자'로 입력해줘!", key = 'quiz10')
+            st.write("아기자기 길드에서 기여도가 제일 높은 사람은 누구일까요?")
+            st.write("보기")
+            st.write("1. 인데놀")
+            st.write("2. 펭펭펀치")
+            st.write("3. NFM비숍")
+            st.write("4. 뱐뎅")
             if st.button("정답 확인", key = "check_answer_button10"):
                 if quiz10 == answer10:
                     st.balloons()
