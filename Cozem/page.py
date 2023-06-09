@@ -120,15 +120,15 @@ with st.sidebar:
     set_BGM(bgm)
     # col3, col4 = st.columns(2)
     # with col3:
-    # st.write("Play")
-    # if st.button("▶"):
-    #     st.success("음악 재생")
-    #     set_BGM(bgm)
-    # # with col4:
-    # st.write("Stop")
-    # if st.button("⬛"):
-    #     st.warning("음악 정지")
-    #     pass
+    st.write("Play")
+    if st.button("▶"):
+        st.success("음악 재생")
+        set_BGM(bgm)
+    # with col4:
+    st.write("Stop")
+    if st.button("⬛"):
+        st.warning("음악 정지")
+        pass
 
 # 선택된 메뉴에 따라 다른 탭 출력
 if choice == "메인페이지":
