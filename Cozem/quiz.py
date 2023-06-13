@@ -838,11 +838,11 @@ elif choice == "아카이브":
             st.image("Cozem/image/guild_photo2.jpg", use_column_width=True)
         col3, col4 = st.columns(2)
         with col3:
-            st.write("**옷맞춤**")
-            st.image("Cozem/image/guild3.jpg", use_column_width=True)
+            st.write("**간부진 단체사진!**")
+            st.image("Cozem/image/guild_manager.jpg", use_column_width=True)
         with col4:
-            st.write("**엘리넬**")
-            st.image("Cozem/image/elinel.jpg", use_column_width=True)
+            st.write("**과거 단체수로 시절 마지막 수로 입장 전 사진!**")
+            st.image("Cozem/image/suro.png", use_column_width=True)
         col5, col6 = st.columns(2)            
         with col5:
             st.write("**아기자기 보스팟 첫 칠흑 몽벨 획득!**")
@@ -857,13 +857,13 @@ elif choice == "아카이브":
         with col8:
             st.write("**길집 대환장 파티**")
             st.image("Cozem/image/house.jpg", use_column_width=True)
-        col9, col10 = st.columns(2)            
+        # col9, col10 = st.columns(2)            
         # with col9:
         #     st.write("**귀여운 셀카(*/ω＼*)**")
         #     st.image("Cozem/image/selfi.jpg", use_column_width=True)
-        with col10:
-            st.write("**과거 단체수로 시절 마지막 수로 입장 전 사진!**")
-            st.image("Cozem/image/suro.png", use_column_width=True)
+        # with col10:
+        #     st.write("**과거 단체수로 시절 마지막 수로 입장 전 사진!**")
+        #     st.image("Cozem/image/suro.png", use_column_width=True)
 
 elif choice == "의견남기기":
     st.header("📮아깅이 소리함📬")
