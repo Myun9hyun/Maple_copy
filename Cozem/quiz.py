@@ -829,13 +829,13 @@ elif choice == "아카이브":
             st.image("Cozem/poster/봄.jpg", width=500)    
     elif options=='길드사진':
         st.write("길드 사진 아카이브입니다.")
-        # col1, col2=st.columns(2)
-        # with col1:
-        #     st.write("**리나와 한컷**")
-        #     st.image("Cozem/image/guild1.jpg", use_column_width=True)
-        # with col2:
-        #     st.write("**왕의 쉼터**")
-        #     st.image("Cozem/image/guild2.jpg", use_column_width=True)
+        col1, col2=st.columns(2)
+        with col1:
+            st.write("**길드 단체사진1**")
+            st.image("Cozem/image/guild_photo1.jpg", use_column_width=True)
+        with col2:
+            st.write("**길드 단체사진2**")
+            st.image("Cozem/image/guild_photo2.jpg", use_column_width=True)
         col3, col4 = st.columns(2)
         with col3:
             st.write("**옷맞춤**")
