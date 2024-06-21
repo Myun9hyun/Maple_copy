@@ -298,7 +298,7 @@ elif choice == "퀴즈풀기":
         password1 = "창설이벤트"
         answer1 = "아기자기"
         password2 = "초초"
-        answer2 = "뱌닢"
+        answer2 = "아기자기"
         password3 = "반디"
         answer3 = "릎샴"
         password4 = "금손"
