@@ -266,7 +266,7 @@ elif choice == "퀴즈풀기":
     with tab1:
         st.header("🗒️길드 창설이벤트 퀴즈 풀기!🗒️")
         st.write("**❗아래의 글을 먼저 잘 읽고 참여하길 바래❗**")
-        st.write("우리 아기자기가 창설 4주년을 맞아 퀴즈 이벤트를 준비해봤어!")
+        st.write("우리 아기자기가 창설 5주년을 맞아 퀴즈 이벤트를 준비해봤어!")
         st.write("우리 아기자기와 항상 함께해준 아깅이들 정말 고마워!(❁´◡`❁)")
         st.write("이번 창설 이벤트는 참여 조건이 **기여도 15만 이상**의 아깅이들만 참석할 수 있어!")
         st.write("창설이벤트에 참석하지 못하는 아깅이들은 왼쪽 메뉴에서 '의견남기기' 탭에 들어가 의견을 남겨줘!")
@@ -339,12 +339,12 @@ elif choice == "퀴즈풀기":
 
         # ----------------------------------------------------------------------------------------------------------
         # 2번
-        character_name1 = "뱌닢"
+        character_name1 = "아기자기"
         url = f'https://maple.gg/u/{character_name1}'
         
         quiz2_password = st.text_input("2번 문제 오픈을 위한 비밀번호를 입력해주세요!")
         if quiz2_password == password2:
-            quiz2 = st.text_input("아기자기 길드의 길드마스터👑로, 디코에 자주 출몰하는 간부의 이름은?")
+            quiz2 = st.text_input("아기자기 길드의 길드마스터👑는 누구일까?")
             if st.button("정답 확인", key = "check_answer_button2"):
                 if quiz2 == answer2:
                     st.balloons()
@@ -363,16 +363,15 @@ elif choice == "퀴즈풀기":
                     img = get_maple_info(character_name1)
                     st.image(img, width=200)
                   
-                    st.write("[뱌닢]은 우리 길드의 길드마스터야!")
-                    st.write("[뱌닢]은 길드를 위해 누구보다 열심히 일해😊")
-                    st.write("[뱌닢]은 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
-                    st.write("[뱌닢]은 길드 노블 공지, 길드 이벤트 공지등의 역할도 하고 있어!")
+                    st.write("[아기자기]는 우리 길드의 길드마스터야!")
+                    st.write("[아기자기]는 길드를 위해 누구보다 열심히 일해😊")
+                    st.write("[아기자기]는 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
+                    st.write("[아기자기]는 길드 노블 공지, 길드 이벤트 공지등의 역할도 하고 있어!")
                     st.write("3번 문제 오픈을 위한 비밀번호는 '반디' 야!")
                 else :
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button2"):
-                st.write("이 사람의 예전 직업은 '제로'였어!")
-                st.write("이 사람의 예전 본캐의 닉네임은 '반디풀잎' 이야!")
+                st.write("우리 길드 이름이 뭐였지?")
         elif quiz2_password != "" and quiz2_password != password2:
             st.error("비밀번호가 틀렸어!")
 
