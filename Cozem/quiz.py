@@ -183,6 +183,10 @@ elif choice == "길드페이지":
         st.write("~추후 추가 예정~")
         st.write("~링크 만들기 귀차낭~")
         st.write("~메지지, 환산 사이트, 큐브 기댓값 사이트 링크로 달 예정~")
+        st.write("~https://maple.gg/~")
+        st.write("~https://maplescouter.com/~")
+        st.write("~https://cubemesu.co/~")
+         [![maple](https://img.shields.io/badge/maplestory%20-%2314354C.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maple.gg/u/아기자기) 
 
 
 
