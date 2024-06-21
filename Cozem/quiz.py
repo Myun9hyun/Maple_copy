@@ -141,7 +141,7 @@ if choice == "메인페이지":
     '''
 
 elif choice == "길드페이지":
-    tab1, tab2= st.tabs(["😎Manager", "📋Rules", "🖥️Sites"])
+    tab1, tab2, tab3= st.tabs(["😎Manager", "📋Rules", "🖥️Sites"])
     with tab1:
         st.header("😎Manager")
         st.write()
