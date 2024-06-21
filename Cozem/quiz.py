@@ -189,8 +189,16 @@ elif choice == "길드페이지":
         st.markdown("[![maple.gg](https://img.shields.io/badge/maple.gg%20-%2314354C.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maple.gg/)")
         st.markdown("[![maplescouter](https://img.shields.io/badge/maplescouter%20-%23FF0000.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maplescouter.com)")
         st.markdown("[![cubemesu](https://img.shields.io/badge/cubemesu%20-%23FFFF00.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://cubemesu.co)")
-
-
+        '''
+        ---
+        ### 외부사이트 💪
+        | 사이트명 | 사이트용도 | 링크 |
+        | :---: | :---: | :---: |
+        | Maple.gg | 메이플 랭킹검색 사이트 | [![maple.gg](https://img.shields.io/badge/maple.gg%20-%2314354C.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maple.gg/) |
+        | MapleScouter | 환산 계산 사이트 |[![maplescouter](https://img.shields.io/badge/maplescouter%20-%23FF0000.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maplescouter.com)|
+        | 큐브매수통 | 큐브기댓값 계산 사이트 | [![cubemesu](https://img.shields.io/badge/cubemesu%20-%23FFFF00.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://cubemesu.co) |
+        | 메애기 | 코디, 길드 가입이력 확인 사이트 |[![meaegi](https://img.shields.io/badge/meaegi%20-%23FFA500.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://meaegi.com/) |
+        '''
 
     #     # 검색할 캐릭터 이름
     #     character_name = st.text_input("닉네임을 입력해주세요 : ")
