@@ -141,7 +141,7 @@ if choice == "메인페이지":
     '''
 
 elif choice == "길드페이지":
-    tab1, tab2= st.tabs(["😎Manager", "📋Rules"])
+    tab1, tab2= st.tabs(["😎Manager", "📋Rules", "🖥️Sites"])
     with tab1:
         st.header("😎Manager")
         st.write()
@@ -177,9 +177,14 @@ elif choice == "길드페이지":
         #             pixmap = page.get_pixmap(dpi=300)  # dpi 값을 300으로 설정
         #             image = Image.frombytes("RGB", [pixmap.width, pixmap.height], pixmap.samples)
         #             st.image(image, caption=f"Page {i+1}", use_column_width=True)
-    # with tab3:
-    #     st.header("🍁메이플지지 검색🍁")
-    #     st.write("메이플 지지 검색결과를 아래를 통해 확인 할 수 있습니다")
+    with tab3:
+        st.header("유용한 외부 사이트")
+        st.write("유용한 외부 사이트를 아래에 링크로 남겨드립니당")
+        st.write("~추후 추가 예정~")
+        st.write("~링크 만들기 귀차낭~")
+        st.write("~메지지, 환산 사이트, 큐브 기댓값 사이트 링크로 달 예정~")
+
+
 
     #     # 검색할 캐릭터 이름
     #     character_name = st.text_input("닉네임을 입력해주세요 : ")
