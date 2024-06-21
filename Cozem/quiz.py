@@ -186,7 +186,7 @@ elif choice == "길드페이지":
         st.write("~https://maple.gg/~")
         st.write("~https://maplescouter.com/~")
         st.write("~https://cubemesu.co/~")
-        st.markdown("[![maple](https://img.shields.io/badge/maplestory%20-%2314354C.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maple.gg/u/영래곰)")
+        st.markdown("[![maple.gg](https://img.shields.io/badge/maple.gg%20-%2314354C.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maple.gg/u/영래곰)")
 
 
 
