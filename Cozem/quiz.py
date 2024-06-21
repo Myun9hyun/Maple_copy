@@ -180,15 +180,15 @@ elif choice == "길드페이지":
     with tab3:
         st.header("유용한 외부 사이트")
         st.write("유용한 외부 사이트를 아래에 링크로 남겨드립니당")
-        st.write("~추후 추가 예정~")
-        st.write("~링크 만들기 귀차낭~")
-        st.write("~메지지, 환산 사이트, 큐브 기댓값 사이트 링크로 달 예정~")
-        st.write("~https://maple.gg/~")
-        st.write("~https://maplescouter.com/~")
-        st.write("~https://cubemesu.co/~")
-        st.markdown("[![maple.gg](https://img.shields.io/badge/maple.gg%20-%2314354C.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maple.gg/)")
-        st.markdown("[![maplescouter](https://img.shields.io/badge/maplescouter%20-%23FF0000.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maplescouter.com)")
-        st.markdown("[![cubemesu](https://img.shields.io/badge/cubemesu%20-%23FFFF00.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://cubemesu.co)")
+        # st.write("~추후 추가 예정~")
+        # st.write("~링크 만들기 귀차낭~")
+        # st.write("~메지지, 환산 사이트, 큐브 기댓값 사이트 링크로 달 예정~")
+        # st.write("~https://maple.gg/~")
+        # st.write("~https://maplescouter.com/~")
+        # st.write("~https://cubemesu.co/~")
+        # st.markdown("[![maple.gg](https://img.shields.io/badge/maple.gg%20-%2314354C.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maple.gg/)")
+        # st.markdown("[![maplescouter](https://img.shields.io/badge/maplescouter%20-%23FF0000.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://maplescouter.com)")
+        # st.markdown("[![cubemesu](https://img.shields.io/badge/cubemesu%20-%23FFFF00.svg?style=for-the-badge&logo=maplestory&logoColor=white)](https://cubemesu.co)")
         '''
         ---
         ### 외부사이트 💪
