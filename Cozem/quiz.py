@@ -410,24 +410,24 @@ elif choice == "퀴즈풀기":
                         return img
                         character_names = [character_name1, character_name2, character_name3, character_name4]
             
-                        # 이미지 리스트 생성
-                        images = []
-                        for name in character_names:
-                            try:
-                                img = get_maple_info(name)
-                                images.append(img)
-                            except Exception as e:
-                                st.error(f"Error fetching image for {name}: {e}")
-                                images.append(None)
-                        
-                        # 4개의 열 생성
-                        cols = st.columns(4)
-                        
-                        # 각 열에 이미지 배치
-                        for col, img in zip(cols, images):
-                            with col:
-                                if img is not None:
-                                    st.image(img, width=200)                  
+                    # 이미지 리스트 생성
+                    images = []
+                    for name in character_names:
+                        try:
+                            img = get_maple_info(name)
+                            images.append(img)
+                        except Exception as e:
+                            st.error(f"Error fetching image for {name}: {e}")
+                            images.append(None)
+                    
+                    # 4개의 열 생성
+                    cols = st.columns(4)
+                    
+                    # 각 열에 이미지 배치
+                    for col, img in zip(cols, images):
+                        with col:
+                            if img is not None:
+                                st.image(img, width=200)                  
                     st.write("[아기자기]는 우리 길드의 길드마스터야!")
                     st.write("[아기자기]는 길드를 위해 누구보다 열심히 일해😊")
                     st.write("[아기자기]는 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
