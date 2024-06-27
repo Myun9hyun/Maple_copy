@@ -377,54 +377,25 @@ elif choice == "퀴즈풀기":
         
         quiz2_password = st.text_input("2번 문제 오픈을 위한 비밀번호를 입력해주세요!")
         if quiz2_password == password2:
-            quiz2 = st.text_input("아기자기 길드의 길드마스터👑는 누구일까?")
-            if st.button("정답 확인", key = "check_answer_button2"):
+            quiz2 = st.text_input("아기자기 길드의 간부진은 총 5명이다!")
+            if st.button("O"):
                 if quiz2 == answer2:
                     st.balloons()
                     st.success("정답입니다!")
                     
                     # # st.image("메지지 이미지 넣기")
-                    # def get_maple_info1(character_name1):
+                    # def get_maple_info(character_name1):
                     #     url = f"https://maple.gg/u/{character_name1}"
                     #     response = requests.get(url)
                     #     soup = BeautifulSoup(response.content, "html.parser")
                     #     img_url = soup.select_one(".character-image")["src"]
                     #     response = requests.get(img_url)
-                    #     img1 = Image.open(BytesIO(response.content))
-                    #     return  img1
-                    # def get_maple_info2(character_name2):
-                    #     url = f"https://maple.gg/u/{character_name2}"
-                    #     response = requests.get(url)
-                    #     soup = BeautifulSoup(response.content, "html.parser")
-                    #     img_url = soup.select_one(".character-image")["src"]
-                    #     response = requests.get(img_url)
-                    #     img2 = Image.open(BytesIO(response.content))
-                    #     return  img2
-                    # def get_maple_info3(character_name3):
-                    #     url = f"https://maple.gg/u/{character_name3}"
-                    #     response = requests.get(url)
-                    #     soup = BeautifulSoup(response.content, "html.parser")
-                    #     img_url = soup.select_one(".character-image")["src"]
-                    #     response = requests.get(img_url)
-                    #     img3 = Image.open(BytesIO(response.content))
-                    #     return  img3
-                    # def get_maple_info4(character_name4):
-                    #     url = f"https://maple.gg/u/{character_name4}"
-                    #     response = requests.get(url)
-                    #     soup = BeautifulSoup(response.content, "html.parser")
-                    #     img_url = soup.select_one(".character-image")["src"]
-                    #     response = requests.get(img_url)
-                    #     img4 = Image.open(BytesIO(response.content))
-                    #     return  img4
+                    #     img = Image.open(BytesIO(response.content))
+                    #     return  img
+                    
+                    # img = get_maple_info(character_name1)
+                    # st.image(img, width=200)
 
-                    # img1 = get_maple_info1(character_name1)
-                    # img2 = get_maple_info2(character_name2)
-                    # img3 = get_maple_info3(character_name3)
-                    # img4 = get_maple_info4(character_name4)
-                    # st.image(img1, width=200)
-                    # st.image(img2, width=200)
-                    # st.image(img3, width=200)
-                    # st.image(img4, width=200)
                     def get_maple_info(character_name):
                         url = f"https://maple.gg/u/{character_name}"
                         response = requests.get(url)
@@ -450,10 +421,11 @@ elif choice == "퀴즈풀기":
                     st.write("[아기자기]는 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
                     st.write("[아기자기]는 길드 노블 공지, 길드 이벤트 공지등의 역할도 하고 있어!")
                     st.write("3번 문제 오픈을 위한 비밀번호는 '반디' 야!")
-                else :
+            if st.button("X"):
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button2"):
-                st.write("우리 길드 이름이 뭐였지?")
+                st.write("카카오톡 길드 공지방 멤버보기에서 왕관표시가 되어있는 인원수를 세어봐!")
+                st.write("혹은 인게임 골목대장, 빵셔틀 직위를 가진 인원을 합치면 돼!")
         elif quiz2_password != "" and quiz2_password != password2:
             st.error("비밀번호가 틀렸어!")
 
