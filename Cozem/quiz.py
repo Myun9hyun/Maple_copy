@@ -384,39 +384,39 @@ elif choice == "퀴즈풀기":
                     st.success("정답입니다!")
                     
                     # # st.image("메지지 이미지 넣기")
-                    # def get_maple_info(character_name1):
-                    #     url = f"https://maple.gg/u/{character_name1}"
-                    #     response = requests.get(url)
-                    #     soup = BeautifulSoup(response.content, "html.parser")
-                    #     img_url = soup.select_one(".character-image")["src"]
-                    #     response = requests.get(img_url)
-                    #     img = Image.open(BytesIO(response.content))
-                    #     return  img
-
-                    # img = get_maple_info(character_name1)
-                    # st.image(img, width=200)
-                    def get_maple_info(character_name):
-                        url = f"https://maple.gg/u/{character_name}"
+                    def get_maple_info(character_name1):
+                        url = f"https://maple.gg/u/{character_name1}"
                         response = requests.get(url)
                         soup = BeautifulSoup(response.content, "html.parser")
                         img_url = soup.select_one(".character-image")["src"]
                         response = requests.get(img_url)
                         img = Image.open(BytesIO(response.content))
-                        return img
+                        return  img
 
-                # 캐릭터 이름 설정
-                character_names = ["character_name1", "character_name2", "character_name3", "character_name4"]
+                    img = get_maple_info(character_name1)
+                    st.image(img, width=200)
+                #     def get_maple_info(character_name):
+                #         url = f"https://maple.gg/u/{character_name}"
+                #         response = requests.get(url)
+                #         soup = BeautifulSoup(response.content, "html.parser")
+                #         img_url = soup.select_one(".character-image")["src"]
+                #         response = requests.get(img_url)
+                #         img = Image.open(BytesIO(response.content))
+                #         return img
 
-                # 이미지 리스트 생성
-                images = [get_maple_info(name) for name in character_names]
+                # # 캐릭터 이름 설정
+                # character_names = ["character_name1", "character_name2", "character_name3", "character_name4"]
 
-                # 4개의 열 생성
-                cols = st.columns(4)
+                # # 이미지 리스트 생성
+                # images = [get_maple_info(name) for name in character_names]
 
-                # 각 열에 이미지 배치
-                for col, img in zip(cols, images):
-                    with col:
-                        st.image(img, width=200)
+                # # 4개의 열 생성
+                # cols = st.columns(4)
+
+                # # 각 열에 이미지 배치
+                # for col, img in zip(cols, images):
+                #     with col:
+                #         st.image(img, width=200)
                   
                     st.write("[아기자기]는 우리 길드의 길드마스터야!")
                     st.write("[아기자기]는 길드를 위해 누구보다 열심히 일해😊")
