@@ -383,51 +383,25 @@ elif choice == "퀴즈풀기":
                     st.balloons()
                     st.success("정답입니다!")
                     
-                    # st.image("메지지 이미지 넣기")
-                    # def get_maple_info(character_name1):
-                    #     url = f"https://maple.gg/u/{character_name1}"
-                    #     response = requests.get(url)
-                    #     soup = BeautifulSoup(response.content, "html.parser")
-                    #     img_url = soup.select_one(".character-image")["src"]
-                    #     response = requests.get(img_url)
-                    #     img = Image.open(BytesIO(response.content))
-                    #     return  img
-
-                    # img = get_maple_info(character_name1)
-                    # st.image(img, width=200)
-                    def get_maple_info(character_name):
-                        url = f"https://maple.gg/u/{character_name}"
+                    st.image("메지지 이미지 넣기")
+                    def get_maple_info(character_name1):
+                        url = f"https://maple.gg/u/{character_name1}"
                         response = requests.get(url)
                         soup = BeautifulSoup(response.content, "html.parser")
-                        img_tag = soup.select_one(".character-image")
-                        
-                        if img_tag is None:
-                            raise ValueError(f"No image found for character: {character_name}")
-                        
-                        img_url = img_tag["src"]
+                        img_url = soup.select_one(".character-image")["src"]
                         response = requests.get(img_url)
                         img = Image.open(BytesIO(response.content))
-                        return img
-                        character_names = [character_name1, character_name2, character_name3, character_name4]
-            
-                    # 이미지 리스트 생성
-                    images = []
-                    for name in character_names:
-                        try:
-                            img = get_maple_info(name)
-                            images.append(img)
-                        except Exception as e:
-                            st.error(f"Error fetching image for {name}: {e}")
-                            images.append(None)
-                    
-                    # 4개의 열 생성
-                    cols = st.columns(4)
-                    
-                    # 각 열에 이미지 배치
-                    for col, img in zip(cols, images):
-                        with col:
-                            if img is not None:
-                                st.image(img, width=200)                  
+                        return  img
+
+                    img1 = get_maple_info(character_name1)
+                    img2 = get_maple_info(character_name2)
+                    img3 = get_maple_info(character_name3)
+                    img4 = get_maple_info(character_name4)
+                    st.image(img1, width=200)
+                    st.image(img2, width=200)
+                    st.image(img3, width=200)
+                    st.image(img4, width=200)
+                                  
                     st.write("[아기자기]는 우리 길드의 길드마스터야!")
                     st.write("[아기자기]는 길드를 위해 누구보다 열심히 일해😊")
                     st.write("[아기자기]는 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
