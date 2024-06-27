@@ -440,8 +440,10 @@ elif choice == "퀴즈풀기":
                     for name in character_names:
                         images.append(get_maple_info(name))
 
-                    for img in images:
-                        st.image(img, width=200)
+                    cols = st.columns(4)  # 4개의 컬럼 생성
+
+                    for col, img in zip(cols, images):
+                        col.image(img, width=200)
                                   
                     st.write("[아기자기]는 우리 길드의 길드마스터야!")
                     st.write("[아기자기]는 길드를 위해 누구보다 열심히 일해😊")
