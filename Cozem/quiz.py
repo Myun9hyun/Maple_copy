@@ -383,48 +383,65 @@ elif choice == "퀴즈풀기":
                     st.balloons()
                     st.success("정답입니다!")
                     
-                    # st.image("메지지 이미지 넣기")
-                    def get_maple_info1(character_name1):
-                        url = f"https://maple.gg/u/{character_name1}"
-                        response = requests.get(url)
-                        soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image")["src"]
-                        response = requests.get(img_url)
-                        img1 = Image.open(BytesIO(response.content))
-                        return  img1
-                    def get_maple_info2(character_name2):
-                        url = f"https://maple.gg/u/{character_name2}"
-                        response = requests.get(url)
-                        soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image")["src"]
-                        response = requests.get(img_url)
-                        img2 = Image.open(BytesIO(response.content))
-                        return  img2
-                    def get_maple_info3(character_name3):
-                        url = f"https://maple.gg/u/{character_name3}"
-                        response = requests.get(url)
-                        soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image")["src"]
-                        response = requests.get(img_url)
-                        img3 = Image.open(BytesIO(response.content))
-                        return  img3
-                    def get_maple_info4(character_name4):
-                        url = f"https://maple.gg/u/{character_name4}"
-                        response = requests.get(url)
-                        soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image")["src"]
-                        response = requests.get(img_url)
-                        img4 = Image.open(BytesIO(response.content))
-                        return  img4
+                    # # st.image("메지지 이미지 넣기")
+                    # def get_maple_info1(character_name1):
+                    #     url = f"https://maple.gg/u/{character_name1}"
+                    #     response = requests.get(url)
+                    #     soup = BeautifulSoup(response.content, "html.parser")
+                    #     img_url = soup.select_one(".character-image")["src"]
+                    #     response = requests.get(img_url)
+                    #     img1 = Image.open(BytesIO(response.content))
+                    #     return  img1
+                    # def get_maple_info2(character_name2):
+                    #     url = f"https://maple.gg/u/{character_name2}"
+                    #     response = requests.get(url)
+                    #     soup = BeautifulSoup(response.content, "html.parser")
+                    #     img_url = soup.select_one(".character-image")["src"]
+                    #     response = requests.get(img_url)
+                    #     img2 = Image.open(BytesIO(response.content))
+                    #     return  img2
+                    # def get_maple_info3(character_name3):
+                    #     url = f"https://maple.gg/u/{character_name3}"
+                    #     response = requests.get(url)
+                    #     soup = BeautifulSoup(response.content, "html.parser")
+                    #     img_url = soup.select_one(".character-image")["src"]
+                    #     response = requests.get(img_url)
+                    #     img3 = Image.open(BytesIO(response.content))
+                    #     return  img3
+                    # def get_maple_info4(character_name4):
+                    #     url = f"https://maple.gg/u/{character_name4}"
+                    #     response = requests.get(url)
+                    #     soup = BeautifulSoup(response.content, "html.parser")
+                    #     img_url = soup.select_one(".character-image")["src"]
+                    #     response = requests.get(img_url)
+                    #     img4 = Image.open(BytesIO(response.content))
+                    #     return  img4
 
-                    img1 = get_maple_info1(character_name1)
-                    img2 = get_maple_info2(character_name2)
-                    img3 = get_maple_info3(character_name3)
-                    img4 = get_maple_info4(character_name4)
-                    st.image(img1, width=200)
-                    st.image(img2, width=200)
-                    st.image(img3, width=200)
-                    st.image(img4, width=200)
+                    # img1 = get_maple_info1(character_name1)
+                    # img2 = get_maple_info2(character_name2)
+                    # img3 = get_maple_info3(character_name3)
+                    # img4 = get_maple_info4(character_name4)
+                    # st.image(img1, width=200)
+                    # st.image(img2, width=200)
+                    # st.image(img3, width=200)
+                    # st.image(img4, width=200)
+                    def get_maple_info(character_name):
+                        url = f"https://maple.gg/u/{character_name}"
+                        response = requests.get(url)
+                        soup = BeautifulSoup(response.content, "html.parser")
+                        img_url = soup.select_one(".character-image")["src"]
+                        response = requests.get(img_url)
+                        img = Image.open(BytesIO(response.content))
+                        return img
+
+                    character_names = [character_name1, character_name2, character_name3, character_name4]
+                    images = []
+
+                    for name in character_names:
+                        images.append(get_maple_info(name))
+
+                    for img in images:
+                        st.image(img, width=200)
                                   
                     st.write("[아기자기]는 우리 길드의 길드마스터야!")
                     st.write("[아기자기]는 길드를 위해 누구보다 열심히 일해😊")
