@@ -332,7 +332,7 @@ elif choice == "퀴즈풀기":
         # 1번
         quiz1_password = st.text_input("1번 문제 오픈을 위한 비밀번호를 입력해주세요!",  key="quiz1_password")
         if quiz1_password == password1:
-            quiz1 = st.info("Q1. 우리 길드의 이름은 아기자기이다!!")
+            quiz1 = st.info("Q1. 우리 길드의 이름은 아기자기이다!!", key="quiz1")
             # if st.button("정답 확인", key="check_answer_button1"):
             if st.button("O"):
                 st.balloons()
@@ -378,7 +378,7 @@ elif choice == "퀴즈풀기":
         quiz2_password = st.text_input("2번 문제 오픈을 위한 비밀번호를 입력해주세요!")
         if quiz2_password == password2:
             quiz2 = st.info("Q2. 아기자기 길드의 간부진은 총 4명이다!")
-            if st.button("O"):
+            if st.button("O", key = "quiz2"):
                 st.balloons()
                 st.success("정답입니다!")
                 
