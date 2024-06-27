@@ -343,7 +343,7 @@ elif choice == "퀴즈풀기":
             if st.button("X"):
                 st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key="check_hint_button1"):
-                    st.warning("이건 힌트를 줄 수가 없어! 잘 생각해 봐")
+                    st.info("이건 힌트를 줄 수가 없어! 잘 생각해 봐")
 
                     # 두 개의 열 생성
                     # col1, col2 = st.columns(2)
@@ -423,8 +423,8 @@ elif choice == "퀴즈풀기":
             if st.button("X"):
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button2"):
-                st.write("카카오톡 길드 공지방 멤버보기에서 왕관표시가 되어있는 인원수를 세어봐!")
-                st.write("혹은 인게임 골목대장, 빵셔틀 직위를 가진 인원을 합치면 돼!")
+                st.info("카카오톡 길드 공지방 멤버보기에서 왕관표시가 되어있는 인원수를 세어봐!")
+                st.info("혹은 인게임 골목대장, 빵셔틀 직위를 가진 인원을 합치면 돼!")
         elif quiz2_password != "" and quiz2_password != password2:
             st.error("비밀번호가 틀렸어!")
 
