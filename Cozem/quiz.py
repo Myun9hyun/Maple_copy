@@ -334,7 +334,7 @@ elif choice == "퀴즈풀기":
         if quiz1_password == password1:
             quiz1 = st.info("Q1. 우리 길드의 이름은 아기자기이다!!", key="quiz1")
             # if st.button("정답 확인", key="check_answer_button1"):
-            if st.button("O"):
+            if st.button("O", key = 'quiz1_button'):
                 st.balloons()
                 st.success("정답입니다!")
                 st.write("우리 아기자기와 함께해줘서 고마워 ╰(*°▽°*)╯")
