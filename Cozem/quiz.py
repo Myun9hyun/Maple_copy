@@ -379,48 +379,47 @@ elif choice == "퀴즈풀기":
         if quiz2_password == password2:
             quiz2 = st.text_input("아기자기 길드의 간부진은 총 5명이다!")
             if st.button("O"):
-                if quiz2 == answer2:
-                    st.balloons()
-                    st.success("정답입니다!")
-                    
-                    # # st.image("메지지 이미지 넣기")
-                    # def get_maple_info(character_name1):
-                    #     url = f"https://maple.gg/u/{character_name1}"
-                    #     response = requests.get(url)
-                    #     soup = BeautifulSoup(response.content, "html.parser")
-                    #     img_url = soup.select_one(".character-image")["src"]
-                    #     response = requests.get(img_url)
-                    #     img = Image.open(BytesIO(response.content))
-                    #     return  img
-                    
-                    # img = get_maple_info(character_name1)
-                    # st.image(img, width=200)
+                st.balloons()
+                st.success("정답입니다!")
+                
+                # # st.image("메지지 이미지 넣기")
+                # def get_maple_info(character_name1):
+                #     url = f"https://maple.gg/u/{character_name1}"
+                #     response = requests.get(url)
+                #     soup = BeautifulSoup(response.content, "html.parser")
+                #     img_url = soup.select_one(".character-image")["src"]
+                #     response = requests.get(img_url)
+                #     img = Image.open(BytesIO(response.content))
+                #     return  img
+                
+                # img = get_maple_info(character_name1)
+                # st.image(img, width=200)
 
-                    def get_maple_info(character_name):
-                        url = f"https://maple.gg/u/{character_name}"
-                        response = requests.get(url)
-                        soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image")["src"]
-                        response = requests.get(img_url)
-                        img = Image.open(BytesIO(response.content))
-                        return img
+                def get_maple_info(character_name):
+                    url = f"https://maple.gg/u/{character_name}"
+                    response = requests.get(url)
+                    soup = BeautifulSoup(response.content, "html.parser")
+                    img_url = soup.select_one(".character-image")["src"]
+                    response = requests.get(img_url)
+                    img = Image.open(BytesIO(response.content))
+                    return img
 
-                    character_names = [character_name1, character_name2, character_name3, character_name4]
-                    images = []
+                character_names = [character_name1, character_name2, character_name3, character_name4]
+                images = []
 
-                    for name in character_names:
-                        images.append(get_maple_info(name))
+                for name in character_names:
+                    images.append(get_maple_info(name))
 
-                    cols = st.columns(4)  # 4개의 컬럼 생성
+                cols = st.columns(4)  # 4개의 컬럼 생성
 
-                    for col, img in zip(cols, images):
-                        col.image(img, width=200)
-                                  
-                    st.write("[아기자기]는 우리 길드의 길드마스터야!")
-                    st.write("[아기자기]는 길드를 위해 누구보다 열심히 일해😊")
-                    st.write("[아기자기]는 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
-                    st.write("[아기자기]는 길드 노블 공지, 길드 이벤트 공지등의 역할도 하고 있어!")
-                    st.write("3번 문제 오픈을 위한 비밀번호는 '반디' 야!")
+                for col, img in zip(cols, images):
+                    col.image(img, width=200)
+                                
+                st.write("[아기자기]는 우리 길드의 길드마스터야!")
+                st.write("[아기자기]는 길드를 위해 누구보다 열심히 일해😊")
+                st.write("[아기자기]는 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
+                st.write("[아기자기]는 길드 노블 공지, 길드 이벤트 공지등의 역할도 하고 있어!")
+                st.write("3번 문제 오픈을 위한 비밀번호는 '반디' 야!")
             if st.button("X"):
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button2"):
