@@ -395,14 +395,14 @@ elif choice == "퀴즈풀기":
 
                     # img = get_maple_info(character_name1)
                     # st.image(img, width=200)
-                def get_maple_info(character_name):
-                url = f"https://maple.gg/u/{character_name}"
-                response = requests.get(url)
-                soup = BeautifulSoup(response.content, "html.parser")
-                img_url = soup.select_one(".character-image")["src"]
-                response = requests.get(img_url)
-                img = Image.open(BytesIO(response.content))
-                return img
+                    def get_maple_info(character_name):
+                        url = f"https://maple.gg/u/{character_name}"
+                        response = requests.get(url)
+                        soup = BeautifulSoup(response.content, "html.parser")
+                        img_url = soup.select_one(".character-image")["src"]
+                        response = requests.get(img_url)
+                        img = Image.open(BytesIO(response.content))
+                        return img
 
                 # 캐릭터 이름 설정
                 character_names = ["character_name1", "character_name2", "character_name3", "character_name4"]
