@@ -415,11 +415,13 @@ elif choice == "퀴즈풀기":
                 for col, img in zip(cols, images):
                     col.image(img, width=200)
                                 
-                st.write("[아기자기]는 우리 길드의 길드마스터야!")
-                st.write("[아기자기]는 길드를 위해 누구보다 열심히 일해😊")
-                st.write("[아기자기]는 매번 위클리 이벤트로 분배된 코젬을 나누는 역할을 하고있어!")
-                st.write("[아기자기]는 길드 노블 공지, 길드 이벤트 공지등의 역할도 하고 있어!")
-                st.write("3번 문제 오픈을 위한 비밀번호는 '반디' 야!")
+                
+                info_text = """
+                아기자기 길드 간부진은 총 4명이야
+                왼쪽부터 [아기자기], [둥둥향], [릎샴], [영래곰] 이야!
+                """
+
+                st.info(info_text)
             if st.button("X"):
                     st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key = "check_hint_button2"):
