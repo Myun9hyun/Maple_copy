@@ -337,13 +337,13 @@ elif choice == "퀴즈풀기":
             if st.button("O"):
                 st.balloons()
                 st.success("정답입니다!")
-                st.write("우리 길드와 함께해줘서 고마워 ╰(*°▽°*)╯")
+                st.write("우리 아기자기와 함께해줘서 고마워 ╰(*°▽°*)╯")
                 st.write("2번 문제 오픈을 위한 비밀번호는 '초초' 야!")
                 st.write("'초초'는 우리 아기자기 연합 길드로, 길드원들의 부캐릭터를 가입 시킬 수 있어!")
             if st.button("X"):
                 st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key="check_hint_button1"):
-                    st.write("이건 힌트를 줄 수가 없어! 잘 생각해 봐")
+                    st.warning("이건 힌트를 줄 수가 없어! 잘 생각해 봐")
 
                     # 두 개의 열 생성
                     # col1, col2 = st.columns(2)
@@ -367,7 +367,13 @@ elif choice == "퀴즈풀기":
         # ----------------------------------------------------------------------------------------------------------
         # 2번
         character_name1 = "아기자기"
-        url = f'https://maple.gg/u/{character_name1}'
+        character_name2 = "둥둥향"
+        character_name3 = "릎샴"
+        character_name4 = "영래곰"
+        url1 = f'https://maple.gg/u/{character_name1}'
+        url2 = f'https://maple.gg/u/{character_name2}'
+        url3 = f'https://maple.gg/u/{character_name3}'
+        url4 = f'https://maple.gg/u/{character_name4}'
         
         quiz2_password = st.text_input("2번 문제 오픈을 위한 비밀번호를 입력해주세요!")
         if quiz2_password == password2:
@@ -377,18 +383,40 @@ elif choice == "퀴즈풀기":
                     st.balloons()
                     st.success("정답입니다!")
                     
-                    # st.image("메지지 이미지 넣기")
-                    def get_maple_info(character_name1):
-                        url = f"https://maple.gg/u/{character_name1}"
-                        response = requests.get(url)
-                        soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image")["src"]
-                        response = requests.get(img_url)
-                        img = Image.open(BytesIO(response.content))
-                        return  img
+                    # # st.image("메지지 이미지 넣기")
+                    # def get_maple_info(character_name1):
+                    #     url = f"https://maple.gg/u/{character_name1}"
+                    #     response = requests.get(url)
+                    #     soup = BeautifulSoup(response.content, "html.parser")
+                    #     img_url = soup.select_one(".character-image")["src"]
+                    #     response = requests.get(img_url)
+                    #     img = Image.open(BytesIO(response.content))
+                    #     return  img
 
-                    img = get_maple_info(character_name1)
-                    st.image(img, width=200)
+                    # img = get_maple_info(character_name1)
+                    # st.image(img, width=200)
+                    def get_maple_info(character_name):
+                    url = f"https://maple.gg/u/{character_name}"
+                    response = requests.get(url)
+                    soup = BeautifulSoup(response.content, "html.parser")
+                    img_url = soup.select_one(".character-image")["src"]
+                    response = requests.get(img_url)
+                    img = Image.open(BytesIO(response.content))
+                    return img
+
+                # 캐릭터 이름 설정
+                character_names = ["character_name1", "character_name2", "character_name3", "character_name4"]
+
+                # 이미지 리스트 생성
+                images = [get_maple_info(name) for name in character_names]
+
+                # 4개의 열 생성
+                cols = st.columns(4)
+
+                # 각 열에 이미지 배치
+                for col, img in zip(cols, images):
+                    with col:
+                        st.image(img, width=200)
                   
                     st.write("[아기자기]는 우리 길드의 길드마스터야!")
                     st.write("[아기자기]는 길드를 위해 누구보다 열심히 일해😊")
