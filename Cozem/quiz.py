@@ -377,7 +377,7 @@ elif choice == "퀴즈풀기":
         
         quiz2_password = st.text_input("2번 문제 오픈을 위한 비밀번호를 입력해주세요!")
         if quiz2_password == password2:
-            quiz2 = st.text_input("아기자기 길드의 간부진은 총 5명이다!")
+            quiz2 = st.write("아기자기 길드의 간부진은 총 5명이다!")
             if st.button("O"):
                 st.balloons()
                 st.success("정답입니다!")
