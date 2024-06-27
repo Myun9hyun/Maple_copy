@@ -417,10 +417,10 @@ elif choice == "퀴즈풀기":
                         img4 = Image.open(BytesIO(response.content))
                         return  img4
 
-                    img1 = get_maple_info(character_name1)
-                    img2 = get_maple_info(character_name2)
-                    img3 = get_maple_info(character_name3)
-                    img4 = get_maple_info(character_name4)
+                    img1 = get_maple_info1(character_name1)
+                    img2 = get_maple_info2(character_name2)
+                    img3 = get_maple_info3(character_name3)
+                    img4 = get_maple_info4(character_name4)
                     st.image(img1, width=200)
                     st.image(img2, width=200)
                     st.image(img3, width=200)
