@@ -337,14 +337,15 @@ elif choice == "퀴즈풀기":
             if st.button("O", key = 'quiz1_O_button'):
                 st.balloons()
                 st.success("정답입니다!")
-                st.write("우리 아기자기와 함께해줘서 고마워 ╰(*°▽°*)╯")
-                st.write("2번 문제 오픈을 위한 비밀번호는 '초초' 야!")
-                st.write("'초초'는 우리 아기자기 연합 길드로, 길드원들의 부캐릭터를 가입 시킬 수 있어!")
-                info_text = """
+                # st.write("우리 아기자기와 함께해줘서 고마워 ╰(*°▽°*)╯")
+                # st.write("2번 문제 오픈을 위한 비밀번호는 '초초' 야!")
+                # st.write("'초초'는 우리 아기자기 연합 길드로, 길드원들의 부캐릭터를 가입 시킬 수 있어!")
+                info_text_quiz1 = """
                 우리 아기자기와 함께해줘서 고마워 ╰(*°▽°*)╯\n
                 2번 문제 오픈을 위한 비밀번호는 '초초' 야!]\n
                 '초초'는 우리 아기자기 연합 길드로, 길드원들의 부캐릭터를 가입 시킬 수 있어!
                 """
+                st.info(info_text_quiz1)
             if st.button("X", key="quiz1_x_button"):
                 st.warning("다시 한 번 생각해봐!")
             if st.button("힌트 보기", key="check_hint_button1"):
