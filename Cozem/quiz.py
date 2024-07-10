@@ -438,8 +438,8 @@ elif choice == "퀴즈풀기":
 
         # ----------------------------------------------------------------------------------------------------------
         # 3번
-        character_name2 = "릎샴"
-        url = f'https://maple.gg/u/{character_name2}'
+        # character_name2 = "릎샴"
+        # url = f'https://maple.gg/u/{character_name2}'
 
         quiz3_password = st.text_input("3번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz3_password3")
         if quiz3_password == password3:
