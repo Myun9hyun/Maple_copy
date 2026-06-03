@@ -543,9 +543,10 @@ elif choice == "퀴즈풀기":
                     #     response = requests.get(img_url)
                     #     img = Image.open(BytesIO(response.content))
                     #     return  img
-                    def get_maple_info(character_name3):
+                    def get_maple_info(character_name2):
+                        import re
 
-                        url = f"https://maple.gg/u/{character_name3}"
+                        url = f"https://maple.gg/u/{character_name2}"
 
                         headers = {
                             "User-Agent": "Mozilla/5.0"
@@ -555,19 +556,28 @@ elif choice == "퀴즈풀기":
 
                         html = response.text
 
-                        # 넥슨 아바타 URL 직접 검색
-                        match = re.search(
-                            r'https://avatar\.maplestory\.nexon\.com/[^"\']+\.png',
-                            html
-                        )
+                        # 1. 일반 img src 탐색
+                        soup = BeautifulSoup(html, "html.parser")
 
-                        if not match:
-                            st.error("캐릭터 이미지 URL 발견 실패")
-                            return None
+                        img_tag = soup.find("img", class_="character-image")
 
-                        img_url = match.group(0)
+                        if img_tag:
+                            img_url = img_tag.get("src")
+                        else:
+                            # 2. 구조 변경 대비 - URL 직접 검색
+                            match = re.search(
+                                r'https://avatar\.maplestory\.nexon\.com/[^"\']+\.png',
+                                html
+                            )
 
-                        img_response = requests.get(
+                            if not match:
+                                st.error(f"{character_name2} 이미지 URL 못 찾음")
+                                return None
+
+                            img_url = match.group(0)
+
+
+                        response = requests.get(
                             img_url,
                             headers={
                                 "User-Agent": "Mozilla/5.0",
@@ -575,14 +585,17 @@ elif choice == "퀴즈풀기":
                             }
                         )
 
-                        if img_response.status_code != 200:
+                        if response.status_code != 200:
+                            st.error("이미지 다운로드 실패")
                             return None
 
-                        img = Image.open(
-                            BytesIO(img_response.content)
-                        )
+                        try:
+                            img = Image.open(BytesIO(response.content))
+                            return img.convert("RGBA")
 
-                        return img.convert("RGBA")
+                        except Exception as e:
+                            st.error(f"이미지 변환 실패: {e}")
+                            return None
 
                     img = get_maple_info(character_name3)
                     st.image(img, width=200)
