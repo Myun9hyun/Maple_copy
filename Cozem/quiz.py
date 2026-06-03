@@ -447,17 +447,29 @@ elif choice == "퀴즈풀기":
                         img_url,
                         headers={
                             "User-Agent": "Mozilla/5.0",
-                            "Referer": "https://maple.gg/"
+                            "Referer": "https://maple.gg/",
+                            "Accept": "image/*"
                         }
                     )
 
                     print("이미지 응답:", img_response.status_code)
                     print("파일 타입:", img_response.headers.get("content-type"))
+                    print("크기:", len(img_response.content))
 
                     if img_response.status_code != 200:
                         return None
 
-                    return Image.open(BytesIO(img_response.content))
+                    try:
+                        img = Image.open(BytesIO(img_response.content))
+
+                        # Streamlit 호환 처리
+                        img = img.convert("RGBA")
+
+                        return img
+
+                    except Exception as e:
+                        print("이미지 변환 실패:", e)
+                        return None
                 
                 info_text = """
                 아기자기 길드 간부진은 총 4명이야.\n
