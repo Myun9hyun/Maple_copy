@@ -500,50 +500,6 @@ elif choice == "퀴즈풀기":
                     st.success("정답입니다!")
                     # st.image("메지지 이미지 넣기")
                     def get_maple_info(character_name2):
-                        url = f"https://maple.gg/u/{character_name2}"
-                        response = requests.get(url)
-                        soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image")["src"]
-                        response = requests.get(img_url)
-                        img = Image.open(BytesIO(response.content))
-                        return  img
-
-                    img = get_maple_info(character_name2)
-                    st.image(img, width=200)
-                    st.write("[릎샴]은 이번 팬페스트에 '볼빵빵하우스'라는 부스 담당자로 참석했어!")
-                    st.write("[릎샴]은 길드에서 포스터, 각종 양식틀, 길드규정문 등을 만드는 디자이너 역할을 하고 있어!")
-                    st.write("[릎샴]은 이번 창설이벤트 경품으로 제공되는 물품도 만들었어!")
-                    st.write("[릎샴]은 길드 이벤트, 공지글 작성 후 최종 검토해주는 역할도 하고 있어!")
-                    st.write("4번 문제 오픈을 위한 비밀번호는 '금손' 이야!")
-                else : 
-                    st.warning("다시 한 번 생각해봐!")
-            if st.button("힌트 보기", key = "check_hint_button3"):
-                st.write("캡틴 김수호와 직업이 같은 사람을 생각해봐!")
-                st.write("이 사람은 '이달의 아깅이' 이벤트에서 키링 이미지 제작도 해주고 있어!")
-        elif quiz3_password != "" and quiz3_password != password3:
-            st.error("비밀번호가 틀렸어!")
-
-        # ----------------------------------------------------------------------------------------------------------
-        # 4번
-        character_name3 = "둥둥향"
-        url = f'https://maple.gg/u/{character_name3}'
-        quiz4_password = st.text_input("4번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz4_password")
-        if quiz4_password == password4:
-            quiz4 = st.text_input("이 페이지👨‍💻 누가 만들었을까?")
-            if st.button("정답 확인", key="check_answer_button4"):
-                if quiz4 == answer4:
-                    st.balloons()
-                    st.success("정답입니다!")
-                    # st.image("메지지 프로필 넣기")
-                    # def get_maple_info(character_name3):
-                    #     url = f"https://maple.gg/u/{character_name3}"
-                    #     response = requests.get(url)
-                    #     soup = BeautifulSoup(response.content, "html.parser")
-                    #     img_url = soup.select_one(".character-image")["src"]
-                    #     response = requests.get(img_url)
-                    #     img = Image.open(BytesIO(response.content))
-                    #     return  img
-                    def get_maple_info(character_name2):
                         import re
 
                         url = f"https://maple.gg/u/{character_name2}"
@@ -596,6 +552,42 @@ elif choice == "퀴즈풀기":
                         except Exception as e:
                             st.error(f"이미지 변환 실패: {e}")
                             return None
+
+                    img = get_maple_info(character_name2)
+                    st.image(img, width=200)
+                    st.write("[릎샴]은 이번 팬페스트에 '볼빵빵하우스'라는 부스 담당자로 참석했어!")
+                    st.write("[릎샴]은 길드에서 포스터, 각종 양식틀, 길드규정문 등을 만드는 디자이너 역할을 하고 있어!")
+                    st.write("[릎샴]은 이번 창설이벤트 경품으로 제공되는 물품도 만들었어!")
+                    st.write("[릎샴]은 길드 이벤트, 공지글 작성 후 최종 검토해주는 역할도 하고 있어!")
+                    st.write("4번 문제 오픈을 위한 비밀번호는 '금손' 이야!")
+                else : 
+                    st.warning("다시 한 번 생각해봐!")
+            if st.button("힌트 보기", key = "check_hint_button3"):
+                st.write("캡틴 김수호와 직업이 같은 사람을 생각해봐!")
+                st.write("이 사람은 '이달의 아깅이' 이벤트에서 키링 이미지 제작도 해주고 있어!")
+        elif quiz3_password != "" and quiz3_password != password3:
+            st.error("비밀번호가 틀렸어!")
+
+        # ----------------------------------------------------------------------------------------------------------
+        # 4번
+        character_name3 = "둥둥향"
+        url = f'https://maple.gg/u/{character_name3}'
+        quiz4_password = st.text_input("4번 문제 오픈을 위한 비밀번호를 입력해주세요!", key = "quiz4_password")
+        if quiz4_password == password4:
+            quiz4 = st.text_input("이 페이지👨‍💻 누가 만들었을까?")
+            if st.button("정답 확인", key="check_answer_button4"):
+                if quiz4 == answer4:
+                    st.balloons()
+                    st.success("정답입니다!")
+                    # st.image("메지지 프로필 넣기")
+                    def get_maple_info(character_name3):
+                        url = f"https://maple.gg/u/{character_name3}"
+                        response = requests.get(url)
+                        soup = BeautifulSoup(response.content, "html.parser")
+                        img_url = soup.select_one(".character-image")["src"]
+                        response = requests.get(img_url)
+                        img = Image.open(BytesIO(response.content))
+                        return  img
 
                     img = get_maple_info(character_name3)
                     st.image(img, width=200)
