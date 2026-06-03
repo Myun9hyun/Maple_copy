@@ -388,38 +388,38 @@ elif choice == "퀴즈풀기":
                 st.balloons()
                 st.success("정답입니다!")
                 
-                # # st.image("메지지 이미지 넣기")
-                # def get_maple_info(character_name1):
-                #     url = f"https://maple.gg/u/{character_name1}"
-                #     response = requests.get(url)
-                #     soup = BeautifulSoup(response.content, "html.parser")
-                #     img_url = soup.select_one(".character-image")["src"]
-                #     response = requests.get(img_url)
-                #     img = Image.open(BytesIO(response.content))
-                #     return  img
+                # st.image("메지지 이미지 넣기")
+                def get_maple_info(character_name1):
+                    url = f"https://maple.gg/u/{character_name1}"
+                    response = requests.get(url)
+                    soup = BeautifulSoup(response.content, "html.parser")
+                    img_url = soup.select_one(".character-image")["src"]
+                    response = requests.get(img_url)
+                    img = Image.open(BytesIO(response.content))
+                    return  img
                 
-                # img = get_maple_info(character_name1)
-                # st.image(img, width=200)
+                img = get_maple_info(character_name1)
+                st.image(img, width=200)
 
-                # def get_maple_info(character_name):
-                #     url = f"https://maple.gg/u/{character_name}"
-                #     response = requests.get(url)
-                #     soup = BeautifulSoup(response.content, "html.parser")
-                #     img_url = soup.select_one(".character-image")["src"]
-                #     response = requests.get(img_url)
-                #     img = Image.open(BytesIO(response.content))
-                #     return img
+                def get_maple_info(character_name):
+                    url = f"https://maple.gg/u/{character_name}"
+                    response = requests.get(url)
+                    soup = BeautifulSoup(response.content, "html.parser")
+                    img_url = soup.select_one(".character-image")["src"]
+                    response = requests.get(img_url)
+                    img = Image.open(BytesIO(response.content))
+                    return img
 
-                # character_names = [character_name1, character_name2, character_name3, character_name4]
-                # images = []
+                character_names = [character_name1, character_name2, character_name3, character_name4]
+                images = []
 
-                # for name in character_names:
-                #     images.append(get_maple_info(name))
+                for name in character_names:
+                    images.append(get_maple_info(name))
 
-                # cols = st.columns(4)  # 4개의 컬럼 생성
+                cols = st.columns(4)  # 4개의 컬럼 생성
 
-                # for col, img in zip(cols, images):
-                #     col.image(img, width=200)   
+                for col, img in zip(cols, images):
+                    col.image(img, width=200)   
                                 
                 def get_maple_info(character_name):
                     url = f"https://maple.gg/u/{character_name}"
