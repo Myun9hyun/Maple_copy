@@ -421,41 +421,43 @@ elif choice == "퀴즈풀기":
                 # for col, img in zip(cols, images):
                 #     col.image(img, width=200)   
                                 
-                # from bs4 import BeautifulSoup
-                # from PIL import Image
-                # from io import BytesIO
-                # import requests
-
-
                 def get_maple_info(character_name):
                     url = f"https://maple.gg/u/{character_name}"
 
                     headers = {
-                        "User-Agent": "Mozilla/5.0"
+                        "User-Agent": "Mozilla/5.0",
+                        "Referer": "https://maple.gg/"
                     }
 
                     response = requests.get(url, headers=headers)
 
                     soup = BeautifulSoup(response.text, "html.parser")
 
-                    # 캐릭터 이미지 태그 찾기
                     img_tag = soup.find("img", class_="character-image")
 
                     if img_tag is None:
-                        print(f"{character_name}: 이미지 없음")
+                        print("이미지 태그 없음:", character_name)
                         return None
 
                     img_url = img_tag.get("src")
 
-                    if not img_url:
+                    print("이미지 주소:", img_url[:100])
+
+                    img_response = requests.get(
+                        img_url,
+                        headers={
+                            "User-Agent": "Mozilla/5.0",
+                            "Referer": "https://maple.gg/"
+                        }
+                    )
+
+                    print("이미지 응답:", img_response.status_code)
+                    print("파일 타입:", img_response.headers.get("content-type"))
+
+                    if img_response.status_code != 200:
                         return None
 
-                    # 넥슨 아바타 이미지 다운로드
-                    img_response = requests.get(img_url, headers=headers)
-
-                    img = Image.open(BytesIO(img_response.content))
-
-                    return img
+                    return Image.open(BytesIO(img_response.content))
                 
                 info_text = """
                 아기자기 길드 간부진은 총 4명이야.\n
