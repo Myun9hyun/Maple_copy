@@ -401,26 +401,46 @@ elif choice == "퀴즈풀기":
                 # img = get_maple_info(character_name1)
                 # st.image(img, width=200)
 
+                # def get_maple_info(character_name):
+                #     url = f"https://maple.gg/u/{character_name}"
+                #     response = requests.get(url)
+                #     soup = BeautifulSoup(response.content, "html.parser")
+                #     img_url = soup.select_one(".character-image")["src"]
+                #     response = requests.get(img_url)
+                #     img = Image.open(BytesIO(response.content))
+                #     return img
+
+                # character_names = [character_name1, character_name2, character_name3, character_name4]
+                # images = []
+
+                # for name in character_names:
+                #     images.append(get_maple_info(name))
+
+                # cols = st.columns(4)  # 4개의 컬럼 생성
+
+                # for col, img in zip(cols, images):
+                #     col.image(img, width=200)   
+                                
                 def get_maple_info(character_name):
                     url = f"https://maple.gg/u/{character_name}"
+
                     response = requests.get(url)
+
                     soup = BeautifulSoup(response.content, "html.parser")
-                    img_url = soup.select_one(".character-image")["src"]
+
+                    img_tag = soup.select_one(".character-image")
+
+                    if img_tag is None:
+                        print(f"{character_name}: 이미지 없음")
+                        return None
+
+                    img_url = img_tag.get("src")
+
                     response = requests.get(img_url)
+
                     img = Image.open(BytesIO(response.content))
+
                     return img
-
-                character_names = [character_name1, character_name2, character_name3, character_name4]
-                images = []
-
-                for name in character_names:
-                    images.append(get_maple_info(name))
-
-                cols = st.columns(4)  # 4개의 컬럼 생성
-
-                for col, img in zip(cols, images):
-                    col.image(img, width=200)
-                                
                 
                 info_text = """
                 아기자기 길드 간부진은 총 4명이야.\n
