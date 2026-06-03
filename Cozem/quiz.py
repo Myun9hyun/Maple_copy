@@ -535,14 +535,54 @@ elif choice == "퀴즈풀기":
                     st.balloons()
                     st.success("정답입니다!")
                     # st.image("메지지 프로필 넣기")
+                    # def get_maple_info(character_name3):
+                    #     url = f"https://maple.gg/u/{character_name3}"
+                    #     response = requests.get(url)
+                    #     soup = BeautifulSoup(response.content, "html.parser")
+                    #     img_url = soup.select_one(".character-image")["src"]
+                    #     response = requests.get(img_url)
+                    #     img = Image.open(BytesIO(response.content))
+                    #     return  img
                     def get_maple_info(character_name3):
+
                         url = f"https://maple.gg/u/{character_name3}"
-                        response = requests.get(url)
-                        soup = BeautifulSoup(response.content, "html.parser")
-                        img_url = soup.select_one(".character-image")["src"]
-                        response = requests.get(img_url)
-                        img = Image.open(BytesIO(response.content))
-                        return  img
+
+                        headers = {
+                            "User-Agent": "Mozilla/5.0"
+                        }
+
+                        response = requests.get(url, headers=headers)
+
+                        html = response.text
+
+                        # 넥슨 아바타 URL 직접 검색
+                        match = re.search(
+                            r'https://avatar\.maplestory\.nexon\.com/[^"\']+\.png',
+                            html
+                        )
+
+                        if not match:
+                            st.error("캐릭터 이미지 URL 발견 실패")
+                            return None
+
+                        img_url = match.group(0)
+
+                        img_response = requests.get(
+                            img_url,
+                            headers={
+                                "User-Agent": "Mozilla/5.0",
+                                "Referer": "https://maple.gg/"
+                            }
+                        )
+
+                        if img_response.status_code != 200:
+                            return None
+
+                        img = Image.open(
+                            BytesIO(img_response.content)
+                        )
+
+                        return img.convert("RGBA")
 
                     img = get_maple_info(character_name3)
                     st.image(img, width=200)
