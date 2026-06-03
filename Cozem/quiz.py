@@ -421,14 +421,25 @@ elif choice == "퀴즈풀기":
                 # for col, img in zip(cols, images):
                 #     col.image(img, width=200)   
                                 
+                # from bs4 import BeautifulSoup
+                # from PIL import Image
+                # from io import BytesIO
+                # import requests
+
+
                 def get_maple_info(character_name):
                     url = f"https://maple.gg/u/{character_name}"
 
-                    response = requests.get(url)
+                    headers = {
+                        "User-Agent": "Mozilla/5.0"
+                    }
 
-                    soup = BeautifulSoup(response.content, "html.parser")
+                    response = requests.get(url, headers=headers)
 
-                    img_tag = soup.select_one(".character-image")
+                    soup = BeautifulSoup(response.text, "html.parser")
+
+                    # 캐릭터 이미지 태그 찾기
+                    img_tag = soup.find("img", class_="character-image")
 
                     if img_tag is None:
                         print(f"{character_name}: 이미지 없음")
@@ -436,9 +447,13 @@ elif choice == "퀴즈풀기":
 
                     img_url = img_tag.get("src")
 
-                    response = requests.get(img_url)
+                    if not img_url:
+                        return None
 
-                    img = Image.open(BytesIO(response.content))
+                    # 넥슨 아바타 이미지 다운로드
+                    img_response = requests.get(img_url, headers=headers)
+
+                    img = Image.open(BytesIO(img_response.content))
 
                     return img
                 
