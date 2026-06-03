@@ -500,6 +500,7 @@ elif choice == "퀴즈풀기":
                     st.success("정답입니다!")
                     # st.image("메지지 이미지 넣기")
                     def get_maple_info(character_name2):
+
                         import re
 
                         url = f"https://maple.gg/u/{character_name2}"
@@ -512,25 +513,30 @@ elif choice == "퀴즈풀기":
 
                         html = response.text
 
-                        # 1. 일반 img src 탐색
                         soup = BeautifulSoup(html, "html.parser")
 
+                        img_url = None
+
+                        # 기존 방식
                         img_tag = soup.find("img", class_="character-image")
 
                         if img_tag:
                             img_url = img_tag.get("src")
-                        else:
-                            # 2. 구조 변경 대비 - URL 직접 검색
+
+                        # 구조 변경 대응
+                        if not img_url:
                             match = re.search(
                                 r'https://avatar\.maplestory\.nexon\.com/[^"\']+\.png',
                                 html
                             )
 
-                            if not match:
-                                st.error(f"{character_name2} 이미지 URL 못 찾음")
-                                return None
+                            if match:
+                                img_url = match.group(0)
 
-                            img_url = match.group(0)
+
+                        if not img_url:
+                            st.error(f"{character_name2}: 이미지 URL 없음")
+                            return None
 
 
                         response = requests.get(
@@ -541,16 +547,18 @@ elif choice == "퀴즈풀기":
                             }
                         )
 
-                        if response.status_code != 200:
-                            st.error("이미지 다운로드 실패")
+
+                        if len(response.content) == 0:
+                            st.error("이미지 데이터 없음")
                             return None
+
 
                         try:
                             img = Image.open(BytesIO(response.content))
                             return img.convert("RGBA")
 
                         except Exception as e:
-                            st.error(f"이미지 변환 실패: {e}")
+                            st.error(f"PIL 이미지 변환 실패: {e}")
                             return None
 
                     img = get_maple_info(character_name2)
